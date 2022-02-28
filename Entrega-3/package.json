@@ -1,0 +1,20 @@
+{
+  "name": "entrega-3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "serverExpress.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "http": "nodemon --inspect serverHttp.js",
+    "express": "nodemon --inspect serverExpress.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.10.0"
+  },
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
