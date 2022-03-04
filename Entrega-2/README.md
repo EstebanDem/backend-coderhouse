@@ -25,7 +25,7 @@
 
 - El formato de cada producto será :
 
-```
+```json
 {
     title: (nombre del producto),
     price: (precio),
@@ -36,7 +36,7 @@
 
 Contenido de "productos.txt" con 3 productos almacenados 
 
-```
+```json
 [                                                                                                                                                     
     {                                                                                                                                                    
       title: 'Escuadra',                                                                                                                                 
