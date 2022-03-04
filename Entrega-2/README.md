@@ -1,5 +1,5 @@
-# Desafío 1
-## Repaso de clases(POO) en JS
+# Desafío 2
+## Manejo de archivos asincrónicamente con Node
 
 ### Consignas
 
@@ -32,3 +32,31 @@
     thumbnail: (url de la foto del producto)
 }
 ```
+### Ejemplo
+
+Contenido de "productos.txt" con 3 productos almacenados 
+
+```
+[                                                                                                                                                     
+    {                                                                                                                                                    
+      title: 'Escuadra',                                                                                                                                 
+      price: 123.45,                                                                                                                                     
+      thumbnail: 'https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png',                                     
+      id: 1                                                                                                                                              
+    },                                                                                                                                                   
+    {                                                                                                                                                    
+      title: 'Calculadora',                                                                                                                              
+      price: 234.56,                                                                                                                                     
+      thumbnail: 'https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png',                                          
+      id: 2                                                                                                                                              
+    },                                                                                                                                                   
+    {                                                                                                                                                    
+      title: 'Globo Terráqueo',                                                                                                                          
+      price: 345.67,                                                                                                                                     
+      thumbnail: 'https://cdn3.iconfinder.com/data/icons/education-209/64/globe-earth-geograhy-planet-school-256.png',                                   
+      id:3                                                                                                                                              
+    }                                                                                                                                                    
+  ]  
+
+```
+
