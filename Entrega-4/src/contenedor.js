@@ -27,6 +27,7 @@ class Contenedor {
   }
 
   async getById(id) {
+    id = Number(id);
     try {
       const data = await this.getData();
       const parsedData = JSON.parse(data);
@@ -41,6 +42,7 @@ class Contenedor {
 
   async deleteById(id) {
     try {
+      id = Number(id);
       const data = await this.getData();
       const parsedData = JSON.parse(data);
       const objectIdToBeRemoved = parsedData.find(
@@ -51,6 +53,7 @@ class Contenedor {
         const index = parsedData.indexOf(objectIdToBeRemoved);
         parsedData.splice(index, 1);
         await fs.promises.writeFile(this._filename, JSON.stringify(parsedData));
+        return true;
       } else {
         console.log(`ID ${id} does not exist in the file`);
         return null;
@@ -59,6 +62,33 @@ class Contenedor {
       console.log(
         `Error Code: ${error.code} | There was an error when trying to delete an element by its ID (${id})`
       );
+    }
+  }
+
+  async updateById(id, newData) {
+    try {
+      id = Number(id);
+      const data = await this.getData();
+      const parsedData = JSON.parse(data);
+      const objectIdToBeUpdated = parsedData.find(
+        (producto) => producto.id === id
+      );
+      if (objectIdToBeUpdated) {
+        const index = parsedData.indexOf(objectIdToBeUpdated);
+        const {title, price, thumbnail} = newData;
+
+        parsedData[index]['title'] = title;
+        parsedData[index]['price'] = price;
+        parsedData[index]['thumbnail'] = thumbnail;
+        await fs.promises.writeFile(this._filename, JSON.stringify(parsedData));
+        return true;
+      } else {
+        console.log(`ID ${id} does not exist in the file`);
+        return null;
+      }
+
+    } catch (error) {
+      `Error Code: ${error.code} | There was an error when trying to update an element by its ID (${id})`
     }
   }
 
