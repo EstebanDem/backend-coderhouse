@@ -34,3 +34,118 @@ Realizar un proyecto de servidor basado en node.js y express que ofrezca una API
 - El servidor debe estar basado en express y debe implementar los mensajes de conexión al puerto 8080 y en caso de error, representar la descripción del mismo.
 
 - Las respuestas del servidor serán en formato JSON. La funcionalidad será probada a través de Postman y del formulario de ingreso.
+
+## Para probar API puedes realizar lo siguiente
+
+1. Estar en el directorio de **'Entrega-4'**
+
+2. Instalar dependencias con: `npm install`
+
+3. Iniciar el servidor con `npm run server`
+
+----
+
+### `GET | http://localhost:8080/api/productos`
+
+✅ *Respuesta:*
+
+```json
+[
+    {
+        "title": "Escuadra",
+        "price": 75.66,
+        "thumbnail": "someUrl.com",
+        "id": 1
+    },
+    {
+        "title": "Calculadora",
+        "price": 72.66,
+        "thumbnail": "someUrl.com",
+        "id": 2
+    }
+]
+```
+### `GET | http://localhost:8080/api/productos/:id`
+
+Para `http://localhost:8080/api/productos/3`
+
+✅ *Respuesta:*
+
+```json
+{
+    "title": "Lapicera",
+    "price": 100,
+    "thumbnail": "someUrl.com",
+    "id": 3
+}
+```
+
+Para un ID que no está presente, por ejemplo: `http://localhost:8080/api/productos/321321`
+
+❌ *Respuesta:*
+
+```json
+{
+    "error": "Producto no encontrado"
+}
+```
+
+### `POST | http://localhost:8080/api/productos`
+
+*Request:*
+
+Body en JSON (no validados)
+
+```json
+{
+    "title": "New Item",
+    "price": 3100,
+    "thumbnail": "someNewUrl.com",
+}
+```
+
+*Respuesta:*
+
+✅ `Producto agregado con el ID: 5`
+
+
+### `PUT | http://localhost:8080/api/productos/:id`
+
+Para `http://localhost:8080/api/productos/2`
+
+*Request:*
+
+Body en JSON (no validados, los 3 campos son requeridos)
+
+```json
+{
+    "title": "New Updated Title",
+    "price": 125,
+    "thumbnail": "someUpdatedUrl.com"
+}
+
+```
+
+*Respuesta:*
+
+✅ `El producto de ID: 2 fue actualizado`
+
+Para un ID que no está presente, por ejemplo: `http://localhost:8080/api/productos/321321`
+
+*Respuesta:*
+
+❌ `El producto no fue actualizado porque no se encontró el ID: 3123`
+
+### `DELETE | http://localhost:8080/api/productos/:id`
+
+Para `http://localhost:8080/api/productos/3`
+
+*Respuesta:*
+
+✅ `El producto de ID: 3 fue borrado`
+
+Para un ID que no está presente, por ejemplo: `http://localhost:8080/api/productos/321321`
+
+*Respuesta:*
+
+❌ `El producto no fue borrado porque no se encontró el ID: 321321`
