@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Escuadra",
+        "price": 75.66,
+        "thumbnail": "someUrl.com",
+        "id": 1
+    },
+    {
+        "title": "Calculadora",
+        "price": 72.66,
+        "thumbnail": "someUrl.com",
+        "id": 2
+    },
+    {
+        "title": "Lapicera",
+        "price": 100,
+        "thumbnail": "someUrl.com",
+        "id": 3
+    },
+    {
+        "title": "Cuaderno A4",
+        "price": 139.99,
+        "thumbnail": "someUrl.com",
+        "id": 4
+    }
+]

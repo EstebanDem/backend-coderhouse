@@ -1,0 +1,18 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Formulario para agregar productos
+  body
+    a(href='/productos') Ver lista
+    h3 Agregar Producto
+    form(action='/productos' method='POST')
+      label(for='title') Título:
+      input(type='text' name='title' required='')
+      label(for='price') Precio:
+      input(type='text' name='price' required='')
+      label(for='thumbnail') Thumbnail:
+      input(type='text' name='thumbnail' required='')
+      button(type='submit') Agregar producto a la lista
