@@ -23,7 +23,7 @@ app.get('/', (req,res) => {
 app.post('/productos', async(req,res) => {
     const {body} = req;
     await contenedor.save(body);
-    
+    res.redirect('/');
 })
 
 const PORT = 6065;
