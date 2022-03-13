@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <%- include('../partials/header') %>
+        <h1>Lista de productos</h1>
+        <table>
+            <tr>
+                <th>#ID</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Imagen</th>
+            </tr>
+            <% productos.forEach(function(producto){ %>
+                <tr>
+                    <td><%= producto.id %></td>
+                    <td><%= producto.title %></td>
+                    <td><%= producto.price %></td>
+                    <td><%= producto.thumbnail %></td>
+                </tr>
+            <%}) %>
+        </table>
+        <%- include('../partials/footer') %>
+    </body>
+</html>

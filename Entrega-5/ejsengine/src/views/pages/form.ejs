@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario para agregar productos</title>
+</head>
+<body>
+    <%- include('../partials/header') %>
+    <h3>Agregar Producto</h3>
+    <form action="/productos" method="POST">
+        <label for="title">Título:</label>
+        <input type="text" name="title" required>
+
+        <label for="price">Precio:</label>
+        <input type="text" name="price" required>
+
+        <label for="thumbnail">Thumbnail:</label>
+        <input type="text" name="thumbnail" required>
+        
+        <button type="submit">Agregar producto a la lista</button>
+    </form>
+    <%- include('../partials/footer') %>
+    
+</body>
+</html>
