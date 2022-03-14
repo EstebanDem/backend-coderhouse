@@ -3,22 +3,33 @@
     <body>
         <%- include('../partials/header') %>
         <h1>Lista de productos</h1>
-        <table>
-            <tr>
-                <th>#ID</th>
-                <th>Nombre</th>
-                <th>Precio</th>
-                <th>Imagen</th>
-            </tr>
-            <% productos.forEach(function(producto){ %>
+        
+        <% if (productos.length > 0) { %>
+        
+            <table>
                 <tr>
-                    <td><%= producto.id %></td>
-                    <td><%= producto.title %></td>
-                    <td><%= producto.price %></td>
-                    <td><%= producto.thumbnail %></td>
+                    <th>#ID</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Imagen</th>
                 </tr>
-            <%}) %>
-        </table>
+                <% productos.forEach(function(producto){ %>
+                    <tr>
+                        <td><%= producto.id %></td>
+                        <td><%= producto.title %></td>
+                        <td><%= producto.price %></td>
+                        <td><%= producto.thumbnail %></td>
+                    </tr>
+                <%}) %>
+            </table>
+            
+            <%} else { %>
+            
+            <p> No hay productos en la lista </p>
+            
+        <% } %>
+         
+        
         <%- include('../partials/footer') %>
     </body>
 </html>
