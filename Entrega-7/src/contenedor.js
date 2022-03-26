@@ -7,12 +7,13 @@ class Contenedor {
     this._readFileOrCreateNewOne();
   }
   
-  _validateKeysExist(keys) {
+  _validateKeysExist(newData) {
+    
+    const objectKeys = Object.keys(newData);
     let exists = true;
     
-    keys.forEach((key) => {
+    objectKeys.forEach((key) => {
       if(!this._keys.includes(key)) {
-        console.log('Error, key no incluida')
         exists = false;
       }
     })
@@ -79,10 +80,7 @@ class Contenedor {
   }
 
   async updateById(id, newData) {
-  
-    const objectKeys = Object.keys(newData);
-    
-    if(this._validateKeysExist(objectKeys)){
+    if(this._validateKeysExist(newData)){
       try {
         id = Number(id);
         const data = await this.getData();
@@ -116,9 +114,7 @@ class Contenedor {
   }
   
   async addToArrayById(id, objectToAdd) {
-  
-    const objectKey = Object.keys(objectToAdd);
-    if(this._validateKeysExist(objectKeys)) {
+    if(this._validateKeysExist(objectToAdd)) {
     try {
       id = Number(id);
       const data = await this.getData();
@@ -193,11 +189,8 @@ class Contenedor {
   
   }
 
-  async save(object) {
-  
-    const objectKeys = Object.keys(object);
-    
-    if(this._validateKeysExist(objectKeys)) {
+  async save(object) {    
+    if(this._validateKeysExist(object)) {
       try {
         const allData = await this.getData();
         const parsedData = JSON.parse(allData);
