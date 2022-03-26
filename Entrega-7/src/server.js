@@ -110,18 +110,17 @@ routerCart.post('/:id/productos', async(req,res) => {
 routerCart.get('/:id/productos', async(req, res) => {
     const { id } = req.params;
     const cart = await carrito.getById(id)
-
-
-    // falta mejorar cuando no es correcto el id .
-    res.status(200).json(cart.products)
+    
+    cart
+        ? res.status(200).json(cart.products)
+        : res.status(404).json({"error": "cart not found"})
+    
     
 })
 
 // DELETE /api/carrito/:id/productos/:id_prod
 routerCart.delete('/:id/productos/:id_prod', async(req, res) => {
     const {id, id_prod } = req.params;
-    
-    
     await carrito.removeFromArrayById(id, id_prod, 'products')
 })
 
