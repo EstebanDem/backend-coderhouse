@@ -114,8 +114,6 @@ routerCart.get('/:id/productos', async(req, res) => {
     cart
         ? res.status(200).json(cart.products)
         : res.status(404).json({"error": "cart not found"})
-    
-    
 })
 
 // DELETE /api/carrito/:id/productos/:id_prod
