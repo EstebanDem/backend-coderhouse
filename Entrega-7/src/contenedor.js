@@ -137,7 +137,7 @@ class Contenedor {
         return true;
       } else {
         console.log(`ID ${id} does not exist in the file`);
-        return null;
+        return false;
       }
 
     } catch (error) {

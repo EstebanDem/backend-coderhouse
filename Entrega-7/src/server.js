@@ -99,11 +99,16 @@ routerCart.post('/:id/productos', async(req,res) => {
     const {id} = req.params;
     const { body } = req;
     
-    const product = await contenedor.getById(body['id']);
+    const product = await contenedor.getById(body['id']);    
     
-    await carrito.addToArrayById(id, {"products": product})
-    
-   //falta resolver  
+    if (product) {
+        const cartExist = await carrito.addToArrayById(id, {"products": product});
+        cartExist
+            ? res.status(200).json({"success" : "product added"})
+            : res.status(404).json({"error": "cart not found"})
+    } else {
+        res.status(404).json({"error": "product not found, verify the ID in the body content is correct."})
+    }
 })
 
 // GET /api/carrito/:id/productos
