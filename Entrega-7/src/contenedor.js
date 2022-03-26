@@ -7,7 +7,7 @@ class Contenedor {
     this._readFileOrCreateNewOne();
   }
   
-  validateKeysExist(keys) {
+  _validateKeysExist(keys) {
     let exists = true;
     
     keys.forEach((key) => {
@@ -82,7 +82,7 @@ class Contenedor {
   
     const objectKeys = Object.keys(newData);
     
-    if(this.validateKeysExist(objectKeys)){
+    if(this._validateKeysExist(objectKeys)){
       try {
         id = Number(id);
         const data = await this.getData();
@@ -118,7 +118,7 @@ class Contenedor {
   async addToArrayById(id, objectToAdd) {
   
     const objectKey = Object.keys(objectToAdd);
-    if(this.validateKeysExist(objectKeys)) {
+    if(this._validateKeysExist(objectKeys)) {
     try {
       id = Number(id);
       const data = await this.getData();
@@ -197,7 +197,7 @@ class Contenedor {
   
     const objectKeys = Object.keys(object);
     
-    if(this.validateKeysExist(objectKeys)) {
+    if(this._validateKeysExist(objectKeys)) {
       try {
         const allData = await this.getData();
         const parsedData = JSON.parse(allData);
