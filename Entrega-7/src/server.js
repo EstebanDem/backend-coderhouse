@@ -95,7 +95,6 @@ routerCart.delete('/:id', async (req, res) => {
 
 // POST /api/carrito/:id/productos
 routerCart.post('/:id/productos', async(req,res) => {
-    //body va el id del producto , parametro es el del carrito.
     const {id} = req.params;
     const { body } = req;
     
