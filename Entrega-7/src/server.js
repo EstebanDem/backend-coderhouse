@@ -123,7 +123,15 @@ routerCart.get('/:id/productos', async(req, res) => {
 // DELETE /api/carrito/:id/productos/:id_prod
 routerCart.delete('/:id/productos/:id_prod', async(req, res) => {
     const {id, id_prod } = req.params;
-    await carrito.removeFromArrayById(id, id_prod, 'products')
+    const productExists = await contenedor.getById(id_prod);
+    if (productExists) {
+        const cartExists = await carrito.removeFromArrayById(id, id_prod, 'products')
+        cartExists
+            ? res.status(200).json({"success" : "product removed"})
+            : res.status(404).json({"error": "cart not found"})
+    } else {
+        res.status(404).json({"error": "product not found"})
+    }
 })
 
 const PORT = 8020;
