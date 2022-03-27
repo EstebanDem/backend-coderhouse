@@ -4,8 +4,18 @@ const Contenedor = require('./contenedor')
 const contenedor = new Contenedor("productos.json", ["timestamp", "title", "price", "description", "code", "image", "stock"]);
 const carrito = new Contenedor("carrito.json", ["timestamp", "products"])
 
+const dotenv = require('dotenv');
+dotenv.config();
+console.log(`Port... ${process.env.TOKEN}`);
+
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
+
+const authMiddleware = app.use((req, res, next) => {
+    req.header('authorization') == process.env.TOKEN 
+        ? next()
+        : res.status(401).json({"error": "unauthorized"})
+})
 
 const routerProducts = express.Router();
 const routerCart = express.Router();
@@ -32,7 +42,7 @@ routerProducts.get('/:id', async (req, res) => {
 })
 
 // POST api/productos
-routerProducts.post('/', async (req,res) => {
+routerProducts.post('/',authMiddleware, async (req,res, next) => {
     const {body} = req;
     
     body.timestamp = Date.now();
@@ -45,7 +55,7 @@ routerProducts.post('/', async (req,res) => {
 })
 
 // PUT api/productos/:id
-routerProducts.put('/:id', async (req, res) => {
+routerProducts.put('/:id', authMiddleware ,async (req, res, next) => {
     const {id} = req.params;
     const {body} = req;
     const wasUpdated = await contenedor.updateById(id,body);
@@ -57,7 +67,7 @@ routerProducts.put('/:id', async (req, res) => {
 
 
 // DELETE /api/productos/:id
-routerProducts.delete('/:id', async (req, res) => {
+routerProducts.delete('/:id', authMiddleware, async (req, res, next) => {
     const {id} = req.params;
     const wasDeleted = await contenedor.deleteById(id);
     
