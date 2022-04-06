@@ -1,0 +1,22 @@
+{
+  "name": "entrega-8",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "better-sqlite3": "7.5.0",
+    "dotenv": "^16.0.0",
+    "knex": "^1.0.5",
+    "mysql2": "^2.3.3",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.12.0"
+  }
+}
