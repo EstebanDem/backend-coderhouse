@@ -6,8 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon --inspect ./src/db.js",
-    "rebuildDB" : "node ./src/dao/start/RebuildDB.js"
+    "server": "nodemon --inspect ./src/server.js",
+    "rebuildDB": "node ./src/dao/start/RebuildDB.js"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +15,7 @@
   "dependencies": {
     "better-sqlite3": "7.5.0",
     "dotenv": "^16.0.0",
+    "express": "^4.17.3",
     "knex": "^1.0.5",
     "mysql2": "^2.3.3",
     "sqlite3": "^5.0.2"

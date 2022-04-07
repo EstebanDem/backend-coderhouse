@@ -9,6 +9,7 @@ export class ProductosDao {
         try {
             const newProductId = await knex.insert(object).from(this.TABLE_NAME);        
             console.log(`✔️ Producto agregado con ID: ${newProductId}.`);
+            return newProductId;
         } catch (error) {
             console.log(error);
         } finally {
@@ -20,6 +21,7 @@ export class ProductosDao {
         try {
             await knex.del().from(this.TABLE_NAME).where(this.ID_COLUMN, id);
             console.log('🪦 Producto borrado.');
+            return true;
         } catch (error) {
             console.log(error);
         } finally {
@@ -39,11 +41,9 @@ export class ProductosDao {
     
     async getProductById(id) {
         try {
-            const product = await knex.select().from(this.TABLE_NAME).where(this.ID_COLUMN, id);
-            console.log(product);
-            return product;
+            return await knex.select().from(this.TABLE_NAME).where(this.ID_COLUMN, id);
         } catch (error) {
-            console.log(error);
+            console.log('Product not found');
         } finally {
             knex.destroy();
         }
@@ -52,6 +52,7 @@ export class ProductosDao {
     async updateProductById(object, id) {
         try {
             await knex.from(this.TABLE_NAME).update(object).where(this.ID_COLUMN, id)
+            return true;
         } catch (error) {
             console.log(error);
         } finally {
