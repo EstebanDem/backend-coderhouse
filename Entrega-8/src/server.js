@@ -1,6 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import { ProductosDao } from './dao/ProductosDao.js';
+import { ProductoDao } from './dao/ProductoDao.js';
 
 dotenv.config();
 
@@ -21,20 +21,20 @@ const routerCart = express.Router();
 app.use('/api/productos', routerProducts);
 app.use('/api/carrito', routerCart);
 
-const productosDao = new ProductosDao();
+const productoDao = new ProductoDao();
 
 /* ------------------------ Product Endpoints ------------------------ */
 
 // GET api/productos
 routerProducts.get('/', async (req, res) => {
-    const products = await productosDao.getAll();
+    const products = await productoDao.getAll();
     res.status(200).json(products);
 })
 
 // GET api/productos/:id
 routerProducts.get('/:id', async (req, res) => {
     const { id } = req.params;
-    const product = await productosDao.getProductById(id);
+    const product = await productoDao.getProductById(id);
     
     product
         ? res.status(200).json(product)
@@ -47,7 +47,7 @@ routerProducts.post('/', async (req,res) => {
     
     body.timestamp = new Date().toISOString().slice(0, 19).replace('T', ' ');
     
-    const newProductId = await productosDao.save(body);
+    const newProductId = await productoDao.save(body);
     
     newProductId
         ? res.status(200).json({"success" : "product added with ID: "+newProductId})
@@ -58,7 +58,7 @@ routerProducts.post('/', async (req,res) => {
 routerProducts.put('/:id',  async (req, res) => {
     const {id} = req.params;
     const {body} = req;
-    const wasUpdated = await productosDao.updateProductById(body, id);
+    const wasUpdated = await productoDao.updateProductById(body, id);
     
     wasUpdated
         ? res.status(200).json({"success" : "product updated"})
@@ -68,7 +68,7 @@ routerProducts.put('/:id',  async (req, res) => {
 // DELETE /api/productos/:id
 routerProducts.delete('/:id', async (req, res) => {
     const {id} = req.params;
-    const wasDeleted = await productosDao.deleteById(id);
+    const wasDeleted = await productoDao.deleteById(id);
     
     wasDeleted 
         ? res.status(200).json({"success": "product successfully removed"})

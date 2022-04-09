@@ -1,8 +1,8 @@
 import { knex } from '../db.js';
 
-export class ProductosDao {
+export class ProductoDao {
 
-    TABLE_NAME = 'productos';
+    TABLE_NAME = 'producto';
     ID_COLUMN = 'id';
     
     async save(object) {

@@ -1,5 +1,7 @@
-import { createTables } from './CreateTables.js';
+import { createProductoTable, createCarritoTable, createProductoCarritoTable } from './CreateTables.js';
 import { populateProducts } from './PopulateProducts.js';
 
-//createTables();
+//createProductoTable();
+//createCarritoTable();
 //populateProducts();
+createProductoCarritoTable();

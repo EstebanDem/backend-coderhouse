@@ -42,7 +42,7 @@ const productos = [
 
 export async function populateProducts() {
     try {
-        await knex.insert(productos).from('productos');
+        await knex.insert(productos).from('producto');
     } catch (error) {
         console.log(error);
     } finally {
