@@ -13,8 +13,47 @@
 *Notas:*
 Definir una carpeta DB para almacenar la base datos SQLite3 llamada ecommerce
 
-### Resolución
+## Resolución
 
 Se plantea el siguiente esquema para que cada Carrito pueda tener productos, solo si el carrito y el producto existen. Además, si se borra un producto o un carrito se borra en cascada en la tabla de relaciones.
 
 ![Diagrama básico tablas](https://raw.githubusercontent.com/EstebanDem/backend-coderhouse/master/Entrega-8/currentSchema.png)
+
+### Ejemplo de las rows de cada tabla
+
+```console
+SELECT * FROM producto;
++----+---------------------+----------------+-------+--------------------------+------+-------------------+-------+
+| id | timestamp           | title          | price | description              | code | image             | stock |
++----+---------------------+----------------+-------+--------------------------+------+-------------------+-------+
+| 1  | 2022-04-09 00:31:53 | Some Product 1 | 100.0 | Some dummy description 1 | XY-1 | someDummyUrl1.com | 150   |
+| 2  | 2022-04-09 00:31:53 | Some Product 2 | 200.0 | Some dummy description 2 | XY-2 | someDummyUrl2.com | 250   |
+| 3  | 2022-04-09 00:31:53 | Some Product 3 | 300.0 | Some dummy description 3 | XY-3 | someDummyUrl3.com | 350   |
++----+---------------------+----------------+-------+--------------------------+------+-------------------+-------+
+```
+
+```console
+SELECT * FROM carrito;
++----+---------------------+
+| id | timestamp           |
++----+---------------------+
+| 1  | 2022-04-09 01:33:37 |
+| 2  | 2022-04-09 01:34:00 |
+| 6  | 2022-04-09 01:36:02 |
+| 7  | 2022-04-09 01:36:03 |
++----+---------------------+
+```
+
+```console
+SELECT * FROM productoCarrito;
++----+-----------+------------+
+| id | carritoId | productoId |
++----+-----------+------------+
+| 8  | 7         | 2          |
+| 9  | 7         | 1          |
+| 10 | 7         | 3          |
++----+-----------+------------+
+
+El carrito de id (7) tiene dentro producto 1, 2 y 3
+
+```
