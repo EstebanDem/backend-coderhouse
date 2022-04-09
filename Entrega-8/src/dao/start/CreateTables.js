@@ -54,10 +54,10 @@ export async function createProductoCarritoTable() {
                 table.increments('id').primary().notNullable(),
                 // <FK carrito>
                 table.integer('carritoId').unsigned().notNullable(),
-                table.foreign('carritoId').references('id').inTable('carrito'),
+                table.foreign('carritoId').references('id').inTable('carrito').onDelete('CASCADE'),
                 // <FK producto>
                 table.integer('productoId').unsigned().notNullable(),
-                table.foreign('productoId').references('id').inTable('producto')
+                table.foreign('productoId').references('id').inTable('producto').onDelete('CASCADE')
             })
             console.log('🟢 La tabla <productoCarrito> ha sido creada')
         }
