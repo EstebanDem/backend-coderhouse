@@ -5,16 +5,15 @@ export class CarritoDao {
     TABLE_NAME = 'carrito';
     ID_COLUMN = 'id';
     
-    async save(object) {
+    async save() {
         try {
-            const newCarritoId = await knex.insert(object).from(this.TABLE_NAME);        
+            const timeNow = {"timestamp": new Date().toISOString().slice(0, 19).replace('T', ' ')};
+            const newCarritoId = await knex.insert(timeNow).from(this.TABLE_NAME);        
             console.log(`✔️ Carrito agregado con ID: ${newCarritoId}.`);
             return newCarritoId;
         } catch (error) {
             console.log(error);
-        } finally {
-            knex.destroy();
-        }
+        } 
     }
     
     async deleteById(id) {

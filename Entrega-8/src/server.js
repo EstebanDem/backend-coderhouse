@@ -1,6 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import { ProductoDao } from './dao/ProductoDao.js';
+import { CarritoDao } from './dao/CarritoDao.js'
 
 dotenv.config();
 
@@ -22,6 +23,7 @@ app.use('/api/productos', routerProducts);
 app.use('/api/carrito', routerCart);
 
 const productoDao = new ProductoDao();
+const carritoDao = new CarritoDao();
 
 /* ------------------------ Product Endpoints ------------------------ */
 
@@ -75,7 +77,16 @@ routerProducts.delete('/:id', async (req, res) => {
         : res.status(404).json({"error": "product not found"})
 })
 
+/* ------------------------ Cart Endpoints ------------------------ */
 
+// POST /api/carrito
+routerCart.post('/', async(req, res) => {
+    const newCartId = await carritoDao.save();
+    
+    newCartId
+        ? res.status(200).json({"success" : "cart added with ID: "+newCartId})
+        : res.status(400).json({"error": "There was a problem, please try again later"});
+})
 
 const PORT = 1234;
 const server = app.listen(PORT, () => {
