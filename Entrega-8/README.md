@@ -19,6 +19,25 @@ Se plantea el siguiente esquema para que cada Carrito pueda tener productos, sol
 
 ![Diagrama básico tablas](https://raw.githubusercontent.com/EstebanDem/backend-coderhouse/master/Entrega-8/currentSchema.png)
 
+### Crear Tablas y rows vía script
+
+Con SQLite y/o MySQL configurados, solo se debe lanzar el siguiente comando por terminal y las tablas se crearán y rellenarán automáticamente.
+
+```console
+.../Entrega-8 $ npm run rebuildDB
+
+    > entrega-8@1.0.0 rebuildDB
+    > node ./src/dao/start/RebuildDB.js
+
+    🟢 La tabla <producto> ha sido creada
+    🟢 La tabla <carrito> ha sido creada
+    🟢 La tabla <productoCarrito> ha sido creada
+    🧪 Se agregaron Productos a la tabla
+    🛒 Se agregaron Carritos a la tabla
+    🛒<->🧪 Se agregaron relaciones a la tabla
+
+```
+
 ### Ejemplo de las rows de cada tabla
 
 ```console
