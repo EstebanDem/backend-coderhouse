@@ -4,4 +4,4 @@ import { populateProducts } from './PopulateProducts.js';
 //createProductoTable();
 //createCarritoTable();
 //populateProducts();
-createProductoCarritoTable();
+//createProductoCarritoTable();
