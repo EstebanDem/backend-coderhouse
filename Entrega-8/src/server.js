@@ -2,6 +2,8 @@ import express from 'express';
 import dotenv from 'dotenv';
 import { ProductoDao } from './dao/ProductoDao.js';
 import { CarritoDao } from './dao/CarritoDao.js'
+import { ProductoCarritoDao } from './dao/ProductoCarritoDao.js';
+import knex from 'knex';
 
 dotenv.config();
 
@@ -24,6 +26,7 @@ app.use('/api/carrito', routerCart);
 
 const productoDao = new ProductoDao();
 const carritoDao = new CarritoDao();
+const productoCarritoDao = new ProductoCarritoDao();
 
 /* ------------------------ Product Endpoints ------------------------ */
 
@@ -97,6 +100,41 @@ routerCart.delete('/:id', async (req, res) => {
         ? res.status(200).json({"success": "cart successfully removed"})
         : res.status(404).json({"error": "cart not found"})
 })
+
+/* ------------------------- <PRODUCTO> - <CARRITO> ------------------------- */
+
+// POST /api/carrito/:id/productos
+
+routerCart.post('/:id/productos', async(req,res) => {
+    
+    const {id} = req.params;
+    const { body } = req;
+    
+    if (Object.prototype.hasOwnProperty.call(body, 'productId')) {
+        const newProductoCarritoId = await productoCarritoDao.saveProductToCart(id, body.productId);
+        
+        newProductoCarritoId 
+            ? res.status(200).json({"success": "Product added correctly to the Cart"})
+            : res.status(400).json({"error": "There was some problem. Maybe the ID of the Cart or the ID of the Product are invalid?"})
+        
+    } else {
+        res.status(400).json({"error": "the key MUST be 'productId', please verify."})
+    }
+    
+})
+
+// DELETE /api/carrito/:id/productos/:id_prod
+routerCart.delete('/:id/productos/:id_prod', async(req, res) => {
+    const {id, id_prod } = req.params;
+    
+    const wasDeleted = productoCarritoDao.deleteProductFromCart(id, id_prod);
+    
+    wasDeleted 
+        ? res.status(200).json({"success": "product removed from the cart"})
+        : res.status(400).json({"error": "there was some problem"})
+    
+})
+
 
 const PORT = 1234;
 const server = app.listen(PORT, () => {
