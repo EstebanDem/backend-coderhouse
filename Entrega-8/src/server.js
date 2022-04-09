@@ -47,7 +47,7 @@ routerProducts.get('/:id', async (req, res) => {
 })
 
 // POST api/productos
-routerProducts.post('/', async (req,res) => {
+routerProducts.post('/',authMiddleware, async (req,res,next) => {
     const {body} = req;
     
     body.timestamp = new Date().toISOString().slice(0, 19).replace('T', ' ');
@@ -60,7 +60,7 @@ routerProducts.post('/', async (req,res) => {
 })
 
 // PUT api/productos/:id
-routerProducts.put('/:id',  async (req, res) => {
+routerProducts.put('/:id', authMiddleware,  async (req, res, next) => {
     const {id} = req.params;
     const {body} = req;
     const wasUpdated = await productoDao.updateProductById(body, id);
@@ -71,7 +71,7 @@ routerProducts.put('/:id',  async (req, res) => {
 })
 
 // DELETE /api/productos/:id
-routerProducts.delete('/:id', async (req, res) => {
+routerProducts.delete('/:id', authMiddleware,  async (req, res, next) => {
     const {id} = req.params;
     const wasDeleted = await productoDao.deleteById(id);
     
