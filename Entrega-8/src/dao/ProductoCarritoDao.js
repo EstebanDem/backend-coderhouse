@@ -34,5 +34,14 @@ export class ProductoCarritoDao {
             console.log(error);
         }
     }
+    
+    async getAllProductsFromCart(cartId) {
+        try {
+            const products = await knex.select(this.PRODUCTO_ID_COLUMN).from(this.TABLE_NAME).where(this.CARRITO_ID_COLUMN, cartId);
+            return products;
+        } catch(error) {
+            console.log(error);
+        }
+    }
 
 }

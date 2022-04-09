@@ -44,9 +44,8 @@ export class ProductoDao {
             return await knex.select().from(this.TABLE_NAME).where(this.ID_COLUMN, id);
         } catch (error) {
             console.log('Product not found');
-        } finally {
-            knex.destroy();
-        }
+        } 
+        
     }
     
     async updateProductById(object, id) {

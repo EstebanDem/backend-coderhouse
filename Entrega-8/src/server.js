@@ -12,11 +12,11 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
 
-/* const authMiddleware = app.use((req, res, next) => {
+const authMiddleware = ((req, res, next) => {
     req.header('authorization') == process.env.TOKEN 
         ? next()
         : res.status(401).json({"error": "unauthorized"})
-}) */
+})
 
 const routerProducts = express.Router();
 const routerCart = express.Router();
@@ -135,6 +135,26 @@ routerCart.delete('/:id/productos/:id_prod', async(req, res) => {
     
 })
 
+// GET /api/carrito/:id/productos
+routerCart.get('/:id/productos',authMiddleware, async(req, res, next) => {
+    const { id } = req.params;
+    const cartProducts = await productoCarritoDao.getAllProductsFromCart(id); // returns : [ { productoId: 2 }, { productoId: 1 }, { productoId: 3 } ]
+    
+    
+    
+    if (cartProducts.length) {
+    
+        const productList = [];
+        for (const cartProduct of cartProducts) {
+            const product = await productoDao.getProductById(cartProduct.productoId);
+            productList.push(product[0])
+        }
+        
+        res.status(200).json(productList)
+    } else {
+        res.status(404).json({"error": "cart not found or has no products."})
+    }
+})
 
 const PORT = 1234;
 const server = app.listen(PORT, () => {
