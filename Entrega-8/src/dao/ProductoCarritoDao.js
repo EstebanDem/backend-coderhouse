@@ -1,5 +1,4 @@
 import { knex } from '../db.js';
-
 export class ProductoCarritoDao {
 
     TABLE_NAME = 'productoCarrito';
@@ -13,7 +12,6 @@ export class ProductoCarritoDao {
             [this.CARRITO_ID_COLUMN]  : cartId,
             [this.PRODUCTO_ID_COLUMN] : productId
         }
-        
         
         try {
             const newProductCartId = await knex.insert(obj).from(this.TABLE_NAME);
@@ -37,11 +35,14 @@ export class ProductoCarritoDao {
     
     async getAllProductsFromCart(cartId) {
         try {
-            const products = await knex.select(this.PRODUCTO_ID_COLUMN).from(this.TABLE_NAME).where(this.CARRITO_ID_COLUMN, cartId);
+            const products = await knex
+                .select('producto.title')
+                .from(this.TABLE_NAME)
+                .join('producto', 'producto.id', 'productoCarrito.productoId')
+                .where(this.CARRITO_ID_COLUMN, cartId);
             return products;
         } catch(error) {
             console.log(error);
         }
     }
-
 }

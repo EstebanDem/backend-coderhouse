@@ -138,17 +138,9 @@ routerCart.delete('/:id/productos/:id_prod', async(req, res) => {
 // GET /api/carrito/:id/productos
 routerCart.get('/:id/productos', async(req, res) => {
     const { id } = req.params;
-    const cartProducts = await productoCarritoDao.getAllProductsFromCart(id); // returns : [ { productoId: 2 }, { productoId: 1 }, { productoId: 3 } ]
-    
+    const cartProducts = await productoCarritoDao.getAllProductsFromCart(id); 
     if (cartProducts.length) {
-    
-        const productList = [];
-        for (const cartProduct of cartProducts) {
-            const product = await productoDao.getProductById(cartProduct.productoId);
-            productList.push(product[0])
-        }
-        
-        res.status(200).json(productList)
+        res.status(200).json(cartProducts)
     } else {
         res.status(404).json({"error": "cart not found or has no products."})
     }
