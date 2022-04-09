@@ -12,3 +12,9 @@
 
 *Notas:*
 Definir una carpeta DB para almacenar la base datos SQLite3 llamada ecommerce
+
+### Resolución
+
+Se plantea el siguiente esquema para que cada Carrito pueda tener productos, solo si el carrito y el producto existen. Además, si se borra un producto o un carrito se borra en cascada en la tabla de relaciones.
+
+![Diagrama básico tablas](https://raw.githubusercontent.com/EstebanDem/backend-coderhouse/master/Entrega-8/currentSchema.png)
