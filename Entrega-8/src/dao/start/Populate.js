@@ -40,12 +40,57 @@ const productos = [
     },
 ]
 
+const carritos = [
+    {
+        timestamp: new Date().toISOString().slice(0, 19).replace('T', ' ')
+    },
+    {
+        timestamp: new Date().toISOString().slice(0, 19).replace('T', ' ')
+    },
+    {
+        timestamp: new Date().toISOString().slice(0, 19).replace('T', ' ')
+    }
+]
+
+const productoCarritoRelations = [
+    {
+        carritoId: 2,
+        productoId: 1
+    },
+    {
+        carritoId: 2,
+        productoId: 2
+    },
+    {
+        carritoId: 2,
+        productoId: 3
+    }
+]
+
 export async function populateProducts() {
     try {
         await knex.insert(productos).from('producto');
+        console.log('🧪 Se agregaron Productos a la tabla')
     } catch (error) {
         console.log(error);
-    } finally {
-        knex.destroy();
+    } 
+}
+
+export async function populateCarts() {
+    try {
+        await knex.insert(carritos).from('carrito');
+        console.log('🛒 Se agregaron Carritos a la tabla')
+    } catch (error) {
+        console.log(error);
+    } 
+}
+
+export async function populateProductoCarrito() {
+    try {
+        await knex.insert(productoCarritoRelations).from('productoCarrito');
+        console.log('🛒<->🧪 Se agregaron relaciones a la tabla')
+        return;
+    } catch(error) {
+        console.log(error);
     }
 }

@@ -20,8 +20,6 @@ export async function createProductoTable() {
         }
     } catch (error) {
         console.log(error);
-    } finally {
-        knex.destroy();
     }
 }
 
@@ -39,8 +37,6 @@ export async function createCarritoTable() {
         }
     } catch (error) {
         console.log(error);
-    } finally {
-        knex.destroy();
     }
 }
 
@@ -63,8 +59,6 @@ export async function createProductoCarritoTable() {
         }
     } catch (error) {
         console.log(error);
-    } finally {
-        knex.destroy();
     }
     
 }

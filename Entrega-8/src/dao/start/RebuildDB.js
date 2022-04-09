@@ -1,7 +1,16 @@
 import { createProductoTable, createCarritoTable, createProductoCarritoTable } from './CreateTables.js';
-import { populateProducts } from './PopulateProducts.js';
+import { populateCarts, populateProductoCarrito, populateProducts } from './Populate.js';
 
-//createProductoTable();
-//createCarritoTable();
-//populateProducts();
-//createProductoCarritoTable();
+async function rebuild() {
+    await createProductoTable();
+    await createCarritoTable();
+    await createProductoCarritoTable();
+    
+    await populateProducts();
+    await populateCarts();
+    
+    await populateProductoCarrito();
+    
+}
+
+rebuild();
