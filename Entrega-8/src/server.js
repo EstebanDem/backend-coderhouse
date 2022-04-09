@@ -136,11 +136,9 @@ routerCart.delete('/:id/productos/:id_prod', async(req, res) => {
 })
 
 // GET /api/carrito/:id/productos
-routerCart.get('/:id/productos',authMiddleware, async(req, res, next) => {
+routerCart.get('/:id/productos', async(req, res) => {
     const { id } = req.params;
     const cartProducts = await productoCarritoDao.getAllProductsFromCart(id); // returns : [ { productoId: 2 }, { productoId: 1 }, { productoId: 3 } ]
-    
-    
     
     if (cartProducts.length) {
     
