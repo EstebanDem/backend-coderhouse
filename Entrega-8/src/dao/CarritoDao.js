@@ -23,8 +23,6 @@ export class CarritoDao {
             return true;
         } catch (error) {
             console.log(error);
-        } finally {
-            knex.destroy();
         }
     }
 }

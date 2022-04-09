@@ -88,6 +88,16 @@ routerCart.post('/', async(req, res) => {
         : res.status(400).json({"error": "There was a problem, please try again later"});
 })
 
+// DELETE /api/carrito/id
+routerCart.delete('/:id', async (req, res) => {
+    const {id} = req.params;
+    const wasDeleted = await carritoDao.deleteById(id);
+    
+    wasDeleted 
+        ? res.status(200).json({"success": "cart successfully removed"})
+        : res.status(404).json({"error": "cart not found"})
+})
+
 const PORT = 1234;
 const server = app.listen(PORT, () => {
 console.log(` >>>>> 🚀 Server started at http://localhost:${PORT}`)
