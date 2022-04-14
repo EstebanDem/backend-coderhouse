@@ -195,3 +195,46 @@ db.productos.updateMany({price: {$gt: 4000}}, {$set: {stock: 0}});
 ```console
 db.productos.deleteMany({price: {$lt: 1000}});
 ```
+
+
+- Creación del usuario **pepe**, con contraseña: **asd456**. Permiso solo de lectura
+  
+```console
+db.createUser({user: "pepe", pwd: "asd456", roles: [{role: "read", db: "ecommerce"}]});
+```
+
+- Login del usuario creado anteriormente
+
+```console
+mongo -u pepe -p --authenticationDatabase ecommerce 
+```
+
+- Vista de las DB que tiene acceso
+
+```console
+> show dbs
+ecommerce  0.000GB
+```
+
+- Intenando agregar un *producto* a la colección **producto** en la db **ecommerce**
+
+```console
+> use ecommerce
+switched to db ecommerce
+> db.productos.insertOne({nombre: "someName"})
+uncaught exception: WriteCommandError({
+	"ok" : 0,
+	"errmsg" : "not authorized on ecommerce to execute command { insert: \"productos\", ordered: true, lsid: { id: UUID(\"0472ecf7-1bf2-47c1-8616-00278992617c\") }, $db: \"ecommerce\" }",
+	"code" : 13,
+	"codeName" : "Unauthorized"
+})
+```
+
+**Aclaración importante❗❗❗**
+
+Para que esto tenga efecto, se debe tener la siguiente config en **mongod.conf**
+
+```console
+security:
+  authorization: "enabled"
+```
