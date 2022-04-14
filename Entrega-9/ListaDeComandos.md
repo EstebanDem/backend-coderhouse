@@ -229,10 +229,14 @@ uncaught exception: WriteCommandError({
 	"codeName" : "Unauthorized"
 })
 ```
+### Aclaración importante❗❗❗
 
-**Aclaración importante❗❗❗**
+En mi caso que estoy utilizando:
 
-Para que esto tenga efecto, se debe tener la siguiente config en **mongod.conf**
+- MongoDB shell version **v5.0.6**
+- MongoDB server version: **5.0.6**
+  
+Para que la autorización tenga efecto, se debe tener la siguiente config en **mongod.conf**
 
 ```console
 security:
