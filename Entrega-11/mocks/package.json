@@ -1,0 +1,22 @@
+{
+  "name": "entrega-10",
+  "version": "1.0.0",
+  "description": "Entrega 10 para bootcamp de backend Coderhouse",
+  "author": "Esteban Demarchi",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "server": "nodemon --inspect ./src/server.js"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "16.0.0",
+    "express": "4.17.3",
+    "mongoose": "6.3.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^6.2.0",
+    "eslint": "8.13.0"
+  }
+}
