@@ -28,6 +28,8 @@ router.get('/:id', async(req, res) => {
     
 })
 
+// GET api/productos/test/random
+
 router.get('/test/random', async(req,res) => {
     const productMocker = new ProductMocker(5);
     const products = productMocker.generateRandomProducts();
