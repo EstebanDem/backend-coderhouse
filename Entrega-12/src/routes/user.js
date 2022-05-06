@@ -25,7 +25,7 @@ router.post('/login', async(req, res) => {
 })
 
 router.get('/', async(req, res) => {
-    res.render('pages/home', {status: req.session.login, userStatus: req.session.login})
+    res.render('pages/home', {status: req.session.login})
 })
 
 router.get('/logout', async(req, res) => {
