@@ -6,6 +6,7 @@ import session from 'express-session';
 import {engine} from 'express-handlebars';
 import path from 'path';
 import {fileURLToPath} from 'url';
+import mongoStore from 'connect-mongo';
 
 const PORT = 3027;
 const app = express();
@@ -25,10 +26,20 @@ app.engine('hbs', engine({
     partialsDir: __dirname + '/views/partials'
 }))
 
-app.use(session({
-    secret: process.env.SECRET,
-    resave: true,
-    saveUninitialized: true
+app.use(
+    session({
+        store: mongoStore.create({
+            mongoUrl: process.env.MONGO_URI,
+            options: {
+                userNewParser: true,
+                useUnifiedTopology: true,
+            }
+        }),
+        secret: process.env.SECRET,
+        resave: true,
+        saveUninitialized: true,
+        cookie: {maxAge: 600000} //10 min.
+        
 }))
 
 app.use(express.json());
