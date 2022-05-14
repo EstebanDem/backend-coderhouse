@@ -13,11 +13,13 @@
   "dependencies": {
     "connect-mongo": "4.6.0",
     "cookie-parser": "1.4.6",
-    "dotenv": "16.0.0",
-    "express": "4.17.3",
-    "express-handlebars": "6.0.5",
-    "express-session": "1.17.2",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.5",
+    "express-session": "^1.17.2",
     "mongoose": "6.3.0",
+    "passport": "^0.5.2",
+    "passport-facebook": "^3.0.0",
     "session-file-store": "1.5.0"
   },
   "devDependencies": {

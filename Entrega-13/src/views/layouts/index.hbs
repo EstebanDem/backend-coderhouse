@@ -32,12 +32,14 @@
                             <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
                                 <li class="nav-item active nav-link">
                                 {{#if status}}
-                                    🟢 Conectado
+                                    <img class="rounded-circle" width="25" alt="100x100" src="{{avatar}}"
+                                        data-holder-rendered="true">
+                                    <strong>{{fbUserName}}</strong> | <a href="/fb-logout">Logout</a>
                                 {{else}}
                                     🔴 Desconectado
                                 {{/if}}
                                 </li>
-                                <li class="nav-item active"><a class="nav-link" href="/api/usuario">Home</a></li>   
+                                {{!-- <li class="nav-item active"><a class="nav-link" href="/api/usuario">Home</a></li> --}}   
                             </ul>
                         </div>
                     </div>
