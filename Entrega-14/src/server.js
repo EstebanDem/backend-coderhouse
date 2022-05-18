@@ -8,7 +8,8 @@ import path from 'path';
 import {fileURLToPath} from 'url';
 import mongoStore from 'connect-mongo';
 
-const PORT = 3027;
+import minimist from 'minimist';
+
 const app = express();
 
 const __filename = fileURLToPath(import.meta.url);
@@ -48,6 +49,19 @@ app.use(express.urlencoded({extended:true}));
 app.use('/api/productos', productRouter);
 app.use('/api/carrito', cartRouter);
 app.use('/api/usuario', userRouter);
+
+/* --------------- Leer el puerto por consola o setear default -------------- */
+
+const options = {
+    alias: {
+        "p": "PORT"
+    },
+    default: {
+        "PORT": 8080
+    }
+};
+
+const { PORT } = minimist(process.argv.slice(2), options);
 
 const server = app.listen(PORT, () => {
     console.log(` >>>>> 🚀 Server started at http://localhost:${PORT}`)
