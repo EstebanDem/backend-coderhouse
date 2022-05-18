@@ -1,7 +1,7 @@
 import express from "express";
 const router = express.Router();
 
-router.get('/info', (req, res) => {
+router.get('/info', (_req, res) => {
     const processInfo = {
         platform: process.platform,
         version: process.version,
