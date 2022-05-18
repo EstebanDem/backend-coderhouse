@@ -2,6 +2,7 @@ import express from "express";
 import productRouter from './routes/product.js';
 import cartRouter from './routes/cart.js';
 import userRouter from './routes/user.js';
+import otherRouter from './routes/other.js';
 import session from 'express-session';
 import {engine} from 'express-handlebars';
 import path from 'path';
@@ -49,6 +50,7 @@ app.use(express.urlencoded({extended:true}));
 app.use('/api/productos', productRouter);
 app.use('/api/carrito', cartRouter);
 app.use('/api/usuario', userRouter);
+app.use('/test', otherRouter);
 
 /* --------------- Leer el puerto por consola o setear default -------------- */
 
