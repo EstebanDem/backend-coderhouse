@@ -28,6 +28,7 @@ router.get('/randoms', (req, res) => {
         res.status(200).json(resultado);
     })
     randomNumbersGeneratorFork.send(cant);
+    console.log('Lista generada')
     
 })
 
