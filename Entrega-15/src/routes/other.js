@@ -1,6 +1,8 @@
 import express from "express";
 const router = express.Router();
 import { fork } from 'child_process';
+import os from 'node:os';
+
 
 router.get('/info', (_req, res) => {
     const processInfo = {
@@ -9,7 +11,8 @@ router.get('/info', (_req, res) => {
         title: process.title,
         execPath: process.execPath,
         processId: process.pid,
-        rss: process.memoryUsage().rss
+        rss: process.memoryUsage().rss,
+        numberOfProcessors: os.cpus().length
     };
     
     res.status(200).json(processInfo);
