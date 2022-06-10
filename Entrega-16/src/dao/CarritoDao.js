@@ -1,6 +1,6 @@
 import "../config/db.js";
 import { CarritosModel } from '../modules/carritos.modules.js';
-
+import logger from "../loggers/Log4jsLogger.js";
 export class CarritoDao {
 
     ID_FIELD = "_id";
@@ -9,7 +9,7 @@ export class CarritoDao {
         try {
             return await CarritosModel.create({});
         } catch (error) {
-            console.log(error);
+            logger.error(error);
             return false;
         }
     }
@@ -18,7 +18,7 @@ export class CarritoDao {
         try {
             return await CarritosModel.findByIdAndDelete({[this.ID_FIELD]: id})
         } catch (error) {
-            console.log(error);
+            logger.error(error);
             return false;
         }
     }
@@ -30,7 +30,7 @@ export class CarritoDao {
             cart.save();
             return true;
         } catch (error) {
-            console.log(error);
+            logger.error(error);
             return false;
         }
     }
@@ -42,7 +42,7 @@ export class CarritoDao {
             cart.save();
             return true;
         } catch (error) {
-            console.log(error);
+            logger.error(error);
             return false;
         }
     }
@@ -51,7 +51,7 @@ export class CarritoDao {
         try {
             return await CarritosModel.findById(id).populate('products').select({products: 1, _id:0});
         } catch (error) {
-            console.log(error);
+            logger.error(error);
             return false;
         }
     }

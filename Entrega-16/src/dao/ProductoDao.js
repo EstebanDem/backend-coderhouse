@@ -1,5 +1,6 @@
 import "../config/db.js";
 import { ProductosModel } from "../modules/productos.modules.js";
+import logger from "../loggers/Log4jsLogger.js";
 
 export class ProductoDao {
 
@@ -9,7 +10,7 @@ export class ProductoDao {
         try {
             return await ProductosModel.findById(id);
         } catch (error) {
-            console.log(error);
+            logger.error(error);
         }
     }
 
@@ -17,7 +18,7 @@ export class ProductoDao {
         try {
             return await ProductosModel.find();
         } catch (error) {
-            console.log(error);
+            logger.error(error);
             return false;
         }
     }
@@ -27,10 +28,9 @@ export class ProductoDao {
             const product = await ProductosModel.findOne({
                 [this.ID_FIELD] : objectId
             })
-            console.log(product);
             return product;
         } catch (error) {
-            console.log(error);
+            logger.error(error);
             return false;
         }
     }
@@ -39,7 +39,7 @@ export class ProductoDao {
         try {
             return await ProductosModel.create(object)
         } catch (error) {
-            console.log(error);
+            logger.error(error);
             return false;
         }
     }
@@ -56,7 +56,7 @@ export class ProductoDao {
                 })
             return true;
         } catch (error) {
-            console.log(error);
+            logger.error(error);
             return false;
         }
     }
@@ -65,7 +65,7 @@ export class ProductoDao {
         try {
             return await ProductosModel.findByIdAndDelete({[this.ID_FIELD]: id})
         } catch (error) {
-            console.log(error);
+            logger.error(error);
             return false;
         }
     }

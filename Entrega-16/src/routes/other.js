@@ -2,7 +2,7 @@ import express from "express";
 const router = express.Router();
 import { fork } from 'child_process';
 import os from 'node:os';
-
+import logger from "../loggers/Log4jsLogger.js";
 
 router.get('/info', (_req, res) => {
     const processInfo = {

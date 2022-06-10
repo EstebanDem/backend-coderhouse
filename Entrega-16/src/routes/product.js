@@ -3,7 +3,7 @@ import { ProductoDao } from "../dao/ProductoDao.js";
 import { authMiddleware } from "../middlewares/Auth.js";
 const router = express.Router();
 const productoDao = new ProductoDao();
-
+import logger from "../loggers/Log4jsLogger.js";
 
 // GET api/productos
 
