@@ -11,6 +11,7 @@
   "keywords": [],
   "license": "ISC",
   "dependencies": {
+    "autocannon": "7.9.0",
     "compression": "1.7.4",
     "connect-mongo": "4.6.0",
     "cookie-parser": "1.4.6",

@@ -14,7 +14,7 @@ router.get('/info', (_req, res) => {
         rss: process.memoryUsage().rss,
         numberOfProcessors: os.cpus().length
     };
-    
+    //console.log(processInfo);
     res.status(200).json(processInfo);
 })
 
