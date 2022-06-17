@@ -54,6 +54,11 @@ app.use('/api/carrito', cartRouter);
 app.use('/api/usuario', userRouter);
 app.use('/test', otherRouter);
 
+
+app.all("*", (req, res) => {
+    res.status(404).json({"error": "ruta no existente"})
+  });
+
 /* --------------- Leer el puerto por consola o setear default -------------- */
 
 const options = {
