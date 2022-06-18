@@ -53,4 +53,4 @@ server.on('error', (err) => logger.error(err));
 
 4. Habilitar en nuestro MongoDB Atlas a todas las IPs, sino el acceso desde Heroku (y del exterior) será negado
 
-<img src="networkAccessMongoAtlas.png" alt="MongoDB Atlas Network settings" width="700"/>
+<img src="networkAccessMongoAtlas.png" alt="MongoDB Atlas Network settings"/>
