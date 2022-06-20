@@ -1,0 +1,15 @@
+<h2>Hi! You're on the homepage.</h2>
+    {{#if status}}
+        <h4>You're logged in, you rock 😎</h4>
+        <p>Only logged users can listen to this masterpiece, enjoy 🤘</p>
+        
+        <div class="embed-responsive embed-responsive-16by9">
+             <iframe width="620" height="415"
+                src="https://www.youtube.com/embed/vu_eq9IPtCg?autoplay=1&mute=1">
+            </iframe> 
+        </div>
+    
+    {{else}}
+       <h4>Oops! Looks like you're not logged in 😲</h4>
+    {{/if}}
+

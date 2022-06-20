@@ -1,0 +1,781 @@
+Statistical profiling result from CONCLGisolate-0x5b25020-31956-v8.log, (1617 ticks, 0 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+   1310   81.0%          /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+     28    1.7%          /usr/lib/x86_64-linux-gnu/libc-2.31.so
+      8    0.5%          /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+     14    0.9%    5.2%  LazyCompile: *resolve node:path:1091:10
+      6    0.4%    2.2%  LazyCompile: *Module._nodeModulePaths node:internal/modules/cjs/loader:629:37
+      5    0.3%    1.8%  LazyCompile: *normalizeString node:path:66:25
+      1    0.1%    0.4%  LazyCompile: *dirname node:path:1275:10
+      1    0.1%    0.4%  Function: ^validateString node:internal/validators:117:24
+      1    0.1%    0.4%  Function: ^tryPackage node:internal/modules/cjs/loader:338:20
+      1    0.1%    0.4%  Function: ^stat node:internal/modules/cjs/loader:151:14
+      1    0.1%    0.4%  Function: ^resolveExports node:internal/modules/cjs/loader:472:24
+      1    0.1%    0.4%  Function: ^realpathSync node:fs:2408:22
+      1    0.1%    0.4%  Function: ^readPackageScope node:internal/modules/cjs/loader:321:26
+      1    0.1%    0.4%  Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1    0.1%    0.4%  Function: ^isAbsolute node:path:1156:13
+      1    0.1%    0.4%  Function: ^importModuleDynamicallyWrap node:internal/vm/module:435:37
+      1    0.1%    0.4%  Function: ^getPathFromURLPosix node:internal/url:1395:29
+      1    0.1%    0.4%  Function: ^getOptions node:internal/fs/utils:314:20
+      1    0.1%    0.4%  Function: ^compileFunction node:vm:308:25
+      1    0.1%    0.4%  Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1    0.1%    0.4%  Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1    0.1%    0.4%  Function: ^IPv4 /home/esteban/Desktop/Backend/Entrega-16/node_modules/ipaddr.js/lib/ipaddr.js:57:18
+      1    0.1%    0.4%  Function: *wasm-function[15]
+
+ [C++]:
+   ticks  total  nonlib   name
+     97    6.0%   35.8%  __write
+     34    2.1%   12.5%  fwrite
+     16    1.0%    5.9%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)
+     11    0.7%    4.1%  epoll_pwait
+      9    0.6%    3.3%  __GI___pthread_mutex_unlock
+      8    0.5%    3.0%  __libc_malloc
+      7    0.4%    2.6%  std::ostream::sentry::sentry(std::ostream&)
+      7    0.4%    2.6%  _IO_file_xsputn
+      5    0.3%    1.8%  syscall
+      4    0.2%    1.5%  __pthread_cond_wait
+      4    0.2%    1.5%  __mprotect
+      3    0.2%    1.1%  __munmap
+      2    0.1%    0.7%  std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const
+      2    0.1%    0.7%  std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
+      2    0.1%    0.7%  cfree
+      2    0.1%    0.7%  __clock_gettime
+      2    0.1%    0.7%  __GI___pthread_mutex_lock
+      1    0.1%    0.4%  std::ostream::flush()
+      1    0.1%    0.4%  std::ostream& std::ostream::_M_insert<unsigned long>(unsigned long)
+      1    0.1%    0.4%  std::ostream& std::ostream::_M_insert<long>(long)
+      1    0.1%    0.4%  std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::do_put(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const
+      1    0.1%    0.4%  std::locale::id::_M_id() const
+      1    0.1%    0.4%  operator new[](unsigned long)
+      1    0.1%    0.4%  operator new(unsigned long)
+      1    0.1%    0.4%  __vsnprintf
+      1    0.1%    0.4%  __new_sem_destroy
+      1    0.1%    0.4%  __mmap
+      1    0.1%    0.4%  __lll_lock_wait
+      1    0.1%    0.4%  __libc_read
+      1    0.1%    0.4%  __GI___pthread_rwlock_wrlock
+      1    0.1%    0.4%  _IO_file_sync
+
+ [Summary]:
+   ticks  total  nonlib   name
+     42    2.6%   15.5%  JavaScript
+    229   14.2%   84.5%  C++
+    129    8.0%   47.6%  GC
+   1346   83.2%          Shared libraries
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+     79   46.5%    4.9%  __write
+     31   18.2%    1.9%  fwrite
+     16    9.4%    1.0%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)
+      7    4.1%    0.4%  std::ostream::sentry::sentry(std::ostream&)
+      7    4.1%    0.4%  _IO_file_xsputn
+      5    2.9%    0.3%  syscall
+      5    2.9%    0.3%  __libc_malloc
+      2    1.2%    0.1%  std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const
+      2    1.2%    0.1%  std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
+      2    1.2%    0.1%  __GI___pthread_mutex_unlock
+      2    1.2%    0.1%  __GI___pthread_mutex_lock
+      1    0.6%    0.1%  std::ostream::flush()
+      1    0.6%    0.1%  std::ostream& std::ostream::_M_insert<unsigned long>(unsigned long)
+      1    0.6%    0.1%  std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::do_put(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const
+      1    0.6%    0.1%  std::locale::id::_M_id() const
+      1    0.6%    0.1%  operator new[](unsigned long)
+      1    0.6%    0.1%  operator new(unsigned long)
+      1    0.6%    0.1%  cfree
+      1    0.6%    0.1%  __vsnprintf
+      1    0.6%    0.1%  __lll_lock_wait
+      1    0.6%    0.1%  __clock_gettime
+      1    0.6%    0.1%  __GI___pthread_rwlock_wrlock
+      1    0.6%    0.1%  _IO_file_sync
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   1310   81.0%  /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+   1050   80.2%    /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+    560   53.3%      Function: ^compileFunction node:vm:308:25
+    558   99.6%        Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+    556   99.6%          Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+    540   97.1%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+     16    2.9%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1110:37
+     74    7.0%      Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+     59   79.7%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+     10   16.9%          Function: ~<anonymous> node:crypto:1:1
+     10  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      8   13.6%          Function: ~<anonymous> node:internal/child_process:1:1
+      8  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      6   10.2%          Function: ~<anonymous> node:http:1:1
+      6  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      4    6.8%          Function: ~<anonymous> node:tls:1:1
+      4  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      4    6.8%          Function: ~<anonymous> node:_http_client:1:1
+      4  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      3    5.1%          Function: ~<anonymous> node:child_process:1:1
+      3  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      3    5.1%          Function: ~<anonymous> node:assert:1:1
+      3  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    3.4%          LazyCompile: ~lazyRequire node:internal/crypto/util:67:21
+      2  100.0%            LazyCompile: ~get node:crypto:287:8
+      2    3.4%          LazyCompile: ~initCJSParse node:internal/modules/esm/translators:63:28
+      2  100.0%            LazyCompile: ~commonjsStrategy node:internal/modules/esm/translators:168:60
+      2    3.4%          Function: ~<anonymous> node:internal/crypto/hkdf:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    3.4%          Function: ~<anonymous> node:cluster:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    3.4%          Function: ~<anonymous> node:_http_common:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.7%          LazyCompile: ~setupChannel node:internal/child_process:569:22
+      1  100.0%            LazyCompile: ~ChildProcess.spawn node:internal/child_process:346:40
+      1    1.7%          LazyCompile: ~lazyLoadStreams node:fs:2841:25
+      1  100.0%            LazyCompile: ~get ReadStream node:fs:2984:17
+      1    1.7%          Function: ~<anonymous> node:net:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.7%          Function: ~<anonymous> node:internal/crypto/util:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.7%          Function: ~<anonymous> node:internal/crypto/pbkdf2:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.7%          Function: ~<anonymous> node:internal/cluster/primary:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.7%          Function: ~<anonymous> node:internal/blocklist:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.7%          Function: ~<anonymous> node:dns:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.7%          Function: ~<anonymous> node:dgram:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.7%          Function: ~<anonymous> node:_tls_wrap:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.7%          Function: ~<anonymous> node:_tls_common:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+     10   13.5%        Function: ^compileForPublicLoader node:internal/bootstrap/loaders:246:25
+     10  100.0%          Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+     10  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      5    6.8%        LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      3   60.0%          LazyCompile: ~loadNativeModule node:internal/modules/cjs/helpers:44:26
+      3  100.0%            LazyCompile: ~builtinStrategy node:internal/modules/esm/translators:270:58
+      2   40.0%          Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+      1   50.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:757:24
+      1   50.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+     41    3.9%      /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+      6   14.6%        Function: ^readPackage node:internal/modules/cjs/loader:290:21
+      5   83.3%          Function: ^readPackageScope node:internal/modules/cjs/loader:321:26
+      4   80.0%            Function: ^trySelf node:internal/modules/cjs/loader:441:17
+      1   20.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1   16.7%          Function: ^tryPackage node:internal/modules/cjs/loader:338:20
+      1  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      3    7.3%        Function: ^compileFunction node:vm:308:25
+      3  100.0%          Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+      3  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      2    4.9%        LazyCompile: ~isIPv6 node:internal/net:35:16
+      2  100.0%          LazyCompile: ~isIP node:internal/net:39:14
+      1   50.0%            LazyCompile: ~lookupAndConnect node:net:995:26
+      1   50.0%            LazyCompile: ~lookup node:dns:97:16
+      1    2.4%        LazyCompile: ~startSession /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/sdam/topology.js:342:17
+      1  100.0%          LazyCompile: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/operations/execute_operation.js:16:48
+      1  100.0%            LazyCompile: ~maybePromise /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/utils.js:397:22
+      1    2.4%        LazyCompile: ~set pathname node:internal/url:884:15
+      1  100.0%          /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+      1  100.0%            LazyCompile: ~pathToFileURL node:internal/url:1455:23
+      1    2.4%        LazyCompile: ~resolveExports node:internal/modules/cjs/loader:472:24
+      1  100.0%          LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%            LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1    2.4%        LazyCompile: ~populateMaps /home/esteban/Desktop/Backend/Entrega-16/node_modules/mime-types/index.js:154:23
+      1  100.0%          Function: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mime-types/index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1    2.4%        LazyCompile: ~parseOptions /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/connection_string.js:208:22
+      1  100.0%          LazyCompile: ~MongoClient /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/mongo_client.js:60:16
+      1  100.0%            LazyCompile: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/lib/connection.js:781:31
+      1    2.4%        LazyCompile: ~isValid /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/read_preference.js:133:19
+      1  100.0%          LazyCompile: ~ReadPreference /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/read_preference.js:26:16
+      1  100.0%            Function: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/read_preference.js:1:1
+      1    2.4%        LazyCompile: ~isNumber /home/esteban/Desktop/Backend/Entrega-16/node_modules/minimist/index.js:240:19
+      1  100.0%          LazyCompile: ~setArg /home/esteban/Desktop/Backend/Entrega-16/node_modules/minimist/index.js:54:21
+      1  100.0%            LazyCompile: ~module.exports /home/esteban/Desktop/Backend/Entrega-16/node_modules/minimist/index.js:1:27
+      1    2.4%        LazyCompile: ~get hasKnownServers /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/sdam/topology_description.js:224:24
+      1  100.0%          LazyCompile: ~shouldCheckForSessionSupport /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/sdam/topology.js:329:33
+      1  100.0%            LazyCompile: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/operations/execute_operation.js:16:48
+      1    2.4%        LazyCompile: ~exports.install /home/esteban/Desktop/Backend/Entrega-16/node_modules/whatwg-url/lib/URLSearchParams.js:96:19
+      1  100.0%          Function: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/whatwg-url/index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1    2.4%        LazyCompile: ~SchemaTypeOptions /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/lib/options/SchemaTypeOptions.js:18:14
+      1  100.0%          LazyCompile: ~SchemaStringOptions /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/lib/options/SchemaStringOptions.js:18:1
+      1  100.0%            LazyCompile: ~SchemaType /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/lib/schematype.js:42:20
+      1    2.4%        LazyCompile: ~Duplex node:internal/streams/duplex:52:16
+      1  100.0%          LazyCompile: ~Socket node:net:283:16
+      1  100.0%            LazyCompile: ~WriteStream node:tty:85:21
+      1    2.4%        LazyCompile: ~Connection.collection /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/lib/connection.js:1022:43
+      1  100.0%          LazyCompile: ~compile /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/lib/model.js:4802:33
+      1  100.0%            LazyCompile: ~Mongoose._model /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/lib/index.js:535:37
+      1    2.4%        LazyCompile: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/lib/helpers/pluralize.js:86:34
+      1  100.0%          /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+      1  100.0%            LazyCompile: ~pluralize /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/lib/helpers/pluralize.js:82:19
+      1    2.4%        LazyCompile: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/cmap/connect.js:78:43
+      1  100.0%          LazyCompile: ~prepareHandshakeDocument /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/cmap/connect.js:146:34
+      1  100.0%            LazyCompile: ~performInitialHandshake /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/cmap/connect.js:62:33
+      1    2.4%        LazyCompile: *realpathSync node:fs:2408:22
+      1  100.0%          Function: ^toRealPath node:internal/modules/cjs/loader:393:20
+      1  100.0%            Function: ^tryFile node:internal/modules/cjs/loader:384:17
+      1    2.4%        Function: ~<anonymous> node:zlib:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            Function: ^compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      1    2.4%        Function: ~<anonymous> node:internal/crypto/keys:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1    2.4%        Function: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/streamroller/node_modules/fs-extra/lib/fs/index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1    2.4%        Function: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mquery/lib/mquery.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1    2.4%        Function: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/graceful-fs/polyfills.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1    2.4%        Function: ^stat node:internal/modules/cjs/loader:151:14
+      1  100.0%          Function: ^tryFile node:internal/modules/cjs/loader:384:17
+      1  100.0%            Function: ^tryExtensions node:internal/modules/cjs/loader:400:23
+      1    2.4%        Function: ^resolve node:path:1091:10
+      1  100.0%          Function: ^readPackage node:internal/modules/cjs/loader:290:21
+      1  100.0%            Function: ^resolveExports node:internal/modules/cjs/loader:472:24
+      1    2.4%        Function: ^processTicksAndRejections node:internal/process/task_queues:68:35
+      1    2.4%        Function: ^getOwn node:internal/bootstrap/loaders:180:16
+      1  100.0%          Function: ^syncExports node:internal/bootstrap/loaders:287:14
+      1  100.0%            LazyCompile: ~<anonymous> node:internal/bootstrap/loaders:273:15
+      1    2.4%        Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      1    2.4%        Function: ^Module._nodeModulePaths node:internal/modules/cjs/loader:629:37
+      1  100.0%          Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1    2.4%        Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1  100.0%          Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      1  100.0%            Function: ^require node:internal/modules/cjs/helpers:101:31
+      1    2.4%        Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1    2.4%        Function: ^Module node:internal/modules/cjs/loader:172:16
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      1    2.4%        Function: ^<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/lib/helpers/pluralize.js:86:34
+      1  100.0%          /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+      1  100.0%            LazyCompile: ~pluralize /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/lib/helpers/pluralize.js:82:19
+     22    2.1%      LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+     22  100.0%        LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      3   13.6%          LazyCompile: ~initializeCJSLoader node:internal/bootstrap/pre_execution:421:29
+      3  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      3   13.6%          Function: ~<anonymous> node:internal/process/esm_loader:1:1
+      3  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      3   13.6%          Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      3  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      3   13.6%          Function: ~<anonymous> node:internal/modules/esm/get_source:1:1
+      3  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    4.5%          LazyCompile: ~setupInspectorHooks node:internal/bootstrap/pre_execution:232:29
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      1    4.5%          LazyCompile: ~initializeSourceMapsHandlers node:internal/bootstrap/pre_execution:460:38
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      1    4.5%          Function: ~<anonymous> node:internal/source_map/source_map_cache:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    4.5%          Function: ~<anonymous> node:internal/modules/esm/resolve:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    4.5%          Function: ~<anonymous> node:internal/modules/esm/module_map:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    4.5%          Function: ~<anonymous> node:internal/modules/esm/load:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    4.5%          Function: ~<anonymous> node:internal/modules/cjs/loader:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    4.5%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    4.5%          Function: ~<anonymous> node:internal/fs/promises:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    4.5%          Function: ~<anonymous> node:internal/bootstrap/pre_execution:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+     18    1.7%      Function: ^stat node:internal/modules/cjs/loader:151:14
+     10   55.6%        Function: ^tryFile node:internal/modules/cjs/loader:384:17
+     10  100.0%          Function: ^tryExtensions node:internal/modules/cjs/loader:400:23
+      9   90.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      1   10.0%            Function: ^tryPackage node:internal/modules/cjs/loader:338:20
+      8   44.4%        Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      7   87.5%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      7  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1   12.5%          LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:757:24
+
+     97    6.0%  __write
+     79   81.4%    /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+      9   11.4%      /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+      1   11.1%        Script: ~<anonymous> file:///home/esteban/Desktop/Backend/Entrega-16/src/loggers/Log4jsLogger.js:1:1
+      1  100.0%          /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+      1  100.0%            /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+      1   11.1%        LazyCompile: ~URL node:internal/url:620:14
+      1  100.0%          LazyCompile: ~pathToFileURL node:internal/url:1455:23
+      1  100.0%            LazyCompile: ~<anonymous> node:internal/modules/run_main:47:29
+      1   11.1%        LazyCompile: ~Kareem.filter /home/esteban/Desktop/Backend/Entrega-16/node_modules/kareem/index.js:321:35
+      1  100.0%          LazyCompile: ~applyStaticHooks /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/lib/helpers/model/applyStaticHooks.js:6:43
+      1  100.0%            LazyCompile: ~compile /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/lib/model.js:4802:33
+      1   11.1%        LazyCompile: ~Connection.openUri /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/lib/connection.js:675:40
+      1  100.0%          LazyCompile: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/lib/index.js:341:49
+      1  100.0%            LazyCompile: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:22
+      1   11.1%        LazyCompile: ~CaseInsensitiveMap /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/connection_string.js:188:16
+      1  100.0%          Function: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/connection_string.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1   11.1%        Function: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/streamroller/node_modules/debug/src/node.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1   11.1%        Function: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/lib/aggregate.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1   11.1%        Function: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/express/lib/router/index.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      3    3.8%      LazyCompile: ~realpathSync node:fs:2408:22
+      3  100.0%        LazyCompile: ~toRealPath node:internal/modules/cjs/loader:393:20
+      3  100.0%          LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+      3  100.0%            LazyCompile: ~resolveMainPath node:internal/modules/run_main:11:25
+      3    3.8%      LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      3  100.0%        Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      2    2.5%      Script: ~<anonymous> file:///home/esteban/Desktop/Backend/Entrega-16/src/server.js:1:1
+      2  100.0%        /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+      2  100.0%          /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+      2  100.0%            LazyCompile: ~run node:internal/modules/esm/module_job:180:12
+      2    2.5%      Function: ~<anonymous> node:internal/fs/promises:1:1
+      2  100.0%        LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2  100.0%          LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      2  100.0%            Function: ~<anonymous> node:internal/modules/esm/get_source:1:1
+      1    1.3%      LazyCompile: ~utf8PercentEncodeCodePointInternal /home/esteban/Desktop/Backend/Entrega-16/node_modules/whatwg-url/lib/percent-encoding.js:97:44
+      1  100.0%        LazyCompile: ~utf8PercentEncodeString /home/esteban/Desktop/Backend/Entrega-16/node_modules/whatwg-url/lib/percent-encoding.js:118:33
+      1  100.0%          LazyCompile: ~parseOpaqueHost /home/esteban/Desktop/Backend/Entrega-16/node_modules/whatwg-url/lib/url-state-machine.js:379:25
+      1  100.0%            LazyCompile: ~parseHost /home/esteban/Desktop/Backend/Entrega-16/node_modules/whatwg-url/lib/url-state-machine.js:328:19
+      1    1.3%      LazyCompile: ~urlencoded /home/esteban/Desktop/Backend/Entrega-16/node_modules/body-parser/lib/types/urlencoded.js:43:21
+      1  100.0%        Script: ~<anonymous> file:///home/esteban/Desktop/Backend/Entrega-16/src/server.js:1:1
+      1  100.0%          /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+      1  100.0%            /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+      1    1.3%      LazyCompile: ~toRealPath node:internal/modules/cjs/loader:393:20
+      1  100.0%        LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%          LazyCompile: ~resolveMainPath node:internal/modules/run_main:11:25
+      1  100.0%            LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:74:31
+      1    1.3%      LazyCompile: ~toBin /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/cmap/commands.js:82:10
+      1  100.0%        LazyCompile: ~writeCommand /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/cmap/message_stream.js:35:17
+      1  100.0%          LazyCompile: ~write /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/cmap/connection.js:513:15
+      1  100.0%            LazyCompile: ~command /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/cmap/connection.js:247:12
+      1    1.3%      LazyCompile: ~toBin /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/cmap/commands.js:496:10
+      1  100.0%        LazyCompile: ~writeCommand /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/cmap/message_stream.js:35:17
+      1  100.0%          LazyCompile: ~write /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/cmap/connection.js:513:15
+      1  100.0%            LazyCompile: ~command /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/cmap/connection.js:247:12
+      1    1.3%      LazyCompile: ~setupTraceCategoryState node:internal/bootstrap/pre_execution:221:33
+      1  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      1  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    1.3%      LazyCompile: ~setupDebugEnv node:internal/bootstrap/pre_execution:193:23
+      1  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      1  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    1.3%      LazyCompile: ~setOption /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/connection_string.js:396:19
+      1  100.0%        LazyCompile: ~parseOptions /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/connection_string.js:208:22
+      1  100.0%          LazyCompile: ~MongoClient /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/mongo_client.js:60:16
+      1  100.0%            LazyCompile: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/lib/connection.js:781:31
+      1    1.3%      LazyCompile: ~set pathname node:internal/url:884:15
+      1  100.0%        /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+      1  100.0%          LazyCompile: ~pathToFileURL node:internal/url:1455:23
+      1  100.0%            LazyCompile: ~defaultResolve node:internal/modules/esm/resolve:981:24
+      1    1.3%      LazyCompile: ~serializeInto /home/esteban/Desktop/Backend/Entrega-16/node_modules/bson/lib/parser/serializer.js:550:23
+      1  100.0%        LazyCompile: ~serialize /home/esteban/Desktop/Backend/Entrega-16/node_modules/bson/lib/bson.js:111:19
+      1  100.0%          LazyCompile: ~toBin /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/cmap/commands.js:82:10
+      1  100.0%            LazyCompile: ~writeCommand /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/cmap/message_stream.js:35:17
+      1    1.3%      LazyCompile: ~resolveOptions /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/utils.js:740:24
+      1  100.0%        LazyCompile: ~createIndex /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/collection.js:254:16
+      1  100.0%          LazyCompile: ~setAutoRemove /home/esteban/Desktop/Backend/Entrega-16/node_modules/connect-mongo/build/main/lib/MongoStore.js:138:18
+      1  100.0%            LazyCompile: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/connect-mongo/build/main/lib/MongoStore.js:124:42
+      1    1.3%      LazyCompile: ~readSync node:fs:684:18
+      1  100.0%        LazyCompile: ~tryReadSync node:fs:429:21
+      1  100.0%          LazyCompile: ~readFileSync node:fs:450:22
+      1  100.0%            LazyCompile: ~cjsPreparseModuleExports node:internal/modules/esm/translators:212:34
+      1    1.3%      LazyCompile: ~proto.<computed> /home/esteban/Desktop/Backend/Entrega-16/node_modules/express/lib/router/index.js:514:27
+      1  100.0%        Script: ~<anonymous> file:///home/esteban/Desktop/Backend/Entrega-16/src/routes/product.js:1:1
+      1  100.0%          /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+      1  100.0%            /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+      1    1.3%      LazyCompile: ~processIncomingData /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/cmap/message_stream.js:84:29
+      1  100.0%        LazyCompile: ~_write /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/cmap/message_stream.js:31:11
+      1  100.0%          LazyCompile: ~writeOrBuffer node:internal/streams/writable:365:23
+      1  100.0%            LazyCompile: ~_write node:internal/streams/writable:283:16
+      1    1.3%      LazyCompile: ~popAsyncContext node:internal/async_hooks:543:25
+      1  100.0%        LazyCompile: ~emitAfterScript node:internal/async_hooks:507:25
+      1  100.0%          LazyCompile: ~processTicksAndRejections node:internal/process/task_queues:68:35
+      1    1.3%      LazyCompile: ~patch /home/esteban/Desktop/Backend/Entrega-16/node_modules/graceful-fs/graceful-fs.js:102:16
+      1  100.0%        Function: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/graceful-fs/graceful-fs.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1    1.3%      LazyCompile: ~parsePackageName node:internal/modules/esm/resolve:795:26
+      1  100.0%        LazyCompile: ~packageResolve node:internal/modules/esm/resolve:838:24
+      1  100.0%          LazyCompile: ~moduleResolve node:internal/modules/esm/resolve:917:23
+      1  100.0%            LazyCompile: ~defaultResolve node:internal/modules/esm/resolve:981:24
+      1    1.3%      LazyCompile: ~parseOptions /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/connection_string.js:204:22
+      1  100.0%        LazyCompile: ~MongoClient /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/mongo_client.js:60:16
+      1  100.0%          LazyCompile: ~connect /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/mongo_client.js:189:19
+      1  100.0%            LazyCompile: ~MongoStore /home/esteban/Desktop/Backend/Entrega-16/node_modules/connect-mongo/build/main/lib/MongoStore.js:75:16
+      1    1.3%      LazyCompile: ~parseIndexOptions /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/utils.js:75:27
+      1  100.0%        LazyCompile: ~makeIndexSpec /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/operations/indexes.js:39:23
+      1  100.0%          LazyCompile: ~CreateIndexOperation /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/operations/indexes.js:119:16
+      1  100.0%            LazyCompile: ~createIndex /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/collection.js:254:16
+      1    1.3%      LazyCompile: ~parseHostName /home/esteban/Desktop/Backend/Entrega-16/node_modules/whatwg-url/lib/url-state-machine.js:773:65
+      1  100.0%        LazyCompile: ~URLStateMachine /home/esteban/Desktop/Backend/Entrega-16/node_modules/whatwg-url/lib/url-state-machine.js:481:25
+      1  100.0%          LazyCompile: ~module.exports.basicURLParse /home/esteban/Desktop/Backend/Entrega-16/node_modules/whatwg-url/lib/url-state-machine.js:1206:41
+      1  100.0%            LazyCompile: ~URLImpl /home/esteban/Desktop/Backend/Entrega-16/node_modules/whatwg-url/lib/URL-impl.js:7:14
+      1    1.3%      LazyCompile: ~nextTick node:internal/process/task_queues:104:18
+      1  100.0%        LazyCompile: ~construct node:internal/streams/destroy:225:19
+      1  100.0%          LazyCompile: ~Writable node:internal/streams/writable:219:18
+      1  100.0%            LazyCompile: ~WriteStream node:internal/fs/streams:306:21
+      1    1.3%      LazyCompile: ~makeInterruptibleAsyncInterval /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/utils.js:647:40
+      1  100.0%        LazyCompile: ~connect /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/sdam/monitor.js:84:12
+      1  100.0%          LazyCompile: ~connect /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/sdam/server.js:97:12
+      1  100.0%            LazyCompile: ~createAndConnectServer /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/sdam/topology.js:514:32
+      1    1.3%      LazyCompile: ~listOnTimeout node:internal/timers:505:25
+      1  100.0%        LazyCompile: ~processTimers node:internal/timers:485:25
+      1    1.3%      LazyCompile: ~getPackageScopeConfig node:internal/modules/esm/resolve:247:31
+      1  100.0%        LazyCompile: ~getPackageType node:internal/modules/esm/resolve:785:24
+      1  100.0%          LazyCompile: ~file: node:internal/modules/esm/get_format:56:10
+      1  100.0%            LazyCompile: ~defaultGetFormat node:internal/modules/esm/get_format:81:26
+      1    1.3%      LazyCompile: ~getMessage node:internal/errors:410:20
+      1  100.0%        Function: ^NodeError node:internal/errors:342:28
+      1  100.0%          LazyCompile: ~onParseError node:internal/url:551:22
+      1  100.0%            /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+      1    1.3%      LazyCompile: ~getGlobal /home/esteban/Desktop/Backend/Entrega-16/node_modules/bson/lib/utils/global.js:9:19
+      1  100.0%        Function: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/bson/lib/map.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1    1.3%      LazyCompile: ~get isSRV /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb-connection-string-url/lib/index.js:162:14
+      1  100.0%        LazyCompile: ~ConnectionString /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb-connection-string-url/lib/index.js:82:16
+      1  100.0%          LazyCompile: ~parseOptions /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/connection_string.js:208:22
+      1  100.0%            LazyCompile: ~MongoClient /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/mongo_client.js:60:16
+      1    1.3%      LazyCompile: ~fork node:child_process:114:14
+      1  100.0%        Script: ~<anonymous> file:///home/esteban/Desktop/Backend/Entrega-16/src/routes/other.js:1:1
+      1  100.0%          /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+      1  100.0%            /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+      1    1.3%      LazyCompile: ~depd /home/esteban/Desktop/Backend/Entrega-16/node_modules/depd/index.js:105:15
+      1  100.0%        Function: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/body-parser/index.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1    1.3%      LazyCompile: ~defaultLoad node:internal/modules/esm/load:7:27
+      1  100.0%        LazyCompile: ~load node:internal/modules/esm/loader:297:13
+      1  100.0%          LazyCompile: ~moduleProvider node:internal/modules/esm/loader:229:28
+      1  100.0%            LazyCompile: ~ModuleJob node:internal/modules/esm/module_job:55:14
+      1    1.3%      LazyCompile: ~debug /home/esteban/Desktop/Backend/Entrega-16/node_modules/streamroller/node_modules/debug/src/common.js:66:17
+      1  100.0%        LazyCompile: ~RollingFileWriteStream /home/esteban/Desktop/Backend/Entrega-16/node_modules/streamroller/lib/RollingFileWriteStream.js:40:14
+      1  100.0%          LazyCompile: ~RollingFileStream /home/esteban/Desktop/Backend/Entrega-16/node_modules/streamroller/lib/RollingFileStream.js:5:14
+      1  100.0%            LazyCompile: ~openTheStream /home/esteban/Desktop/Backend/Entrega-16/node_modules/log4js/lib/appenders/file.js:51:25
+      1    1.3%      LazyCompile: ~createTopology /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/operations/connect.js:44:24
+      1  100.0%        LazyCompile: ~connect /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/operations/connect.js:8:17
+      1  100.0%          LazyCompile: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/mongo_client.js:126:52
+      1  100.0%            LazyCompile: ~maybePromise /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/utils.js:397:22
+      1    1.3%      LazyCompile: ~connectHandler /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/cmap/connect.js:298:28
+      1  100.0%        LazyCompile: ~onceWrapper node:events:504:21
+      1  100.0%          Function: ^emit node:events:340:44
+      1  100.0%            LazyCompile: ~afterConnect node:net:1119:22
+      1    1.3%      LazyCompile: ~connectHandler /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/cmap/connect.js:305:28
+      1  100.0%        LazyCompile: ~onceWrapper node:events:504:21
+      1  100.0%          Function: ^emit node:events:340:44
+      1  100.0%            LazyCompile: ~afterConnect node:net:1119:22
+      1    1.3%      LazyCompile: ~configure /home/esteban/Desktop/Backend/Entrega-16/node_modules/log4js/lib/configuration.js:37:19
+      1  100.0%        LazyCompile: ~configure /home/esteban/Desktop/Backend/Entrega-16/node_modules/log4js/lib/log4js.js:59:19
+      1  100.0%          Script: ~<anonymous> file:///home/esteban/Desktop/Backend/Entrega-16/src/loggers/Log4jsLogger.js:1:1
+      1  100.0%            /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+      1    1.3%      LazyCompile: ~config /home/esteban/Desktop/Backend/Entrega-16/node_modules/dotenv/lib/main.js:55:17
+      1  100.0%        Script: ~<anonymous> file:///home/esteban/Desktop/Backend/Entrega-16/src/config/db.js:1:1
+      1  100.0%          /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+      1  100.0%            /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+      1    1.3%      LazyCompile: ~command /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/cmap/connection.js:247:12
+      1  100.0%        LazyCompile: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/cmap/connect.js:78:43
+      1  100.0%          LazyCompile: ~prepareHandshakeDocument /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/cmap/connect.js:139:34
+      1  100.0%            LazyCompile: ~performInitialHandshake /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/cmap/connect.js:62:33
+      1    1.3%      LazyCompile: ~Stats node:internal/fs/utils:495:15
+      1  100.0%        LazyCompile: ~getStatsFromBinding node:internal/fs/utils:530:29
+      1  100.0%          LazyCompile: ~statSync node:fs:1528:18
+      1  100.0%            LazyCompile: ~tryStatSync node:internal/modules/esm/resolve:183:3
+      1    1.3%      LazyCompile: ~ServerSession /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/sessions.js:540:16
+      1  100.0%        LazyCompile: ~acquire /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/sessions.js:611:12
+      1  100.0%          LazyCompile: ~get serverSession /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/sessions.js:85:22
+      1  100.0%            LazyCompile: ~applySession /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/sessions.js:664:22
+      1    1.3%      LazyCompile: ~Readable.removeAllListeners node:internal/streams/readable:923:49
+      1  100.0%        LazyCompile: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/cmap/connect.js:299:37
+      1  100.0%          /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+      1  100.0%            LazyCompile: ~connectHandler /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/cmap/connect.js:298:28
+      1    1.3%      LazyCompile: ~Readable node:internal/streams/readable:181:18
+      1  100.0%        LazyCompile: ~Duplex node:internal/streams/duplex:52:16
+      1  100.0%          LazyCompile: ~Socket node:net:283:16
+      1  100.0%            LazyCompile: ~WriteStream node:tty:85:21
+      1    1.3%      LazyCompile: ~Mongoose /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/lib/index.js:60:18
+      1  100.0%        Function: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/lib/index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1    1.3%      LazyCompile: ~Long.comp /home/esteban/Desktop/Backend/Entrega-16/node_modules/bson/lib/long.js:312:36
+      1  100.0%        LazyCompile: ~Long.lessThanOrEqual /home/esteban/Desktop/Backend/Entrega-16/node_modules/bson/lib/long.js:517:47
+      1  100.0%          LazyCompile: ~deserializeObject /home/esteban/Desktop/Backend/Entrega-16/node_modules/bson/lib/parser/deserializer.js:65:27
+      1  100.0%            LazyCompile: ~deserializeObject /home/esteban/Desktop/Backend/Entrega-16/node_modules/bson/lib/parser/deserializer.js:65:27
+      1    1.3%      LazyCompile: ~HandlebarsEnvironment /home/esteban/Desktop/Backend/Entrega-16/node_modules/handlebars/dist/cjs/handlebars/base.js:46:31
+      1  100.0%        LazyCompile: ~create /home/esteban/Desktop/Backend/Entrega-16/node_modules/handlebars/dist/cjs/handlebars.runtime.js:40:16
+      1  100.0%          Function: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/handlebars/dist/cjs/handlebars.runtime.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1    1.3%      LazyCompile: ~Db /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/db.js:81:16
+      1  100.0%        LazyCompile: ~db /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/mongo_client.js:165:7
+      1  100.0%          LazyCompile: ~_setClient /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/lib/connection.js:836:20
+      1  100.0%            LazyCompile: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/lib/connection.js:792:20
+      1    1.3%      LazyCompile: ~CreateIndexOperation /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/operations/indexes.js:119:16
+      1  100.0%        LazyCompile: ~createIndex /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/collection.js:254:16
+      1  100.0%          LazyCompile: ~setAutoRemove /home/esteban/Desktop/Backend/Entrega-16/node_modules/connect-mongo/build/main/lib/MongoStore.js:138:18
+      1  100.0%            LazyCompile: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/connect-mongo/build/main/lib/MongoStore.js:124:42
+      1    1.3%      LazyCompile: ~Connection.openUri /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/lib/connection.js:675:40
+      1  100.0%        LazyCompile: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/lib/index.js:341:49
+      1  100.0%          LazyCompile: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:22
+      1  100.0%            /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+      1    1.3%      LazyCompile: ~Bitfield /home/esteban/Desktop/Backend/Entrega-16/node_modules/sparse-bitfield/index.js:5:19
+      1  100.0%        LazyCompile: ~Bitfield /home/esteban/Desktop/Backend/Entrega-16/node_modules/sparse-bitfield/index.js:5:19
+      1  100.0%          LazyCompile: ~read /home/esteban/Desktop/Backend/Entrega-16/node_modules/saslprep/lib/memory-code-points.js:15:14
+      1  100.0%            Function: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/saslprep/lib/memory-code-points.js:1:1
+      1    1.3%      LazyCompile: ~<anonymous> node:internal/url:682:12
+      1  100.0%        Function: ^get href node:internal/url:734:11
+      1  100.0%          Function: ^isURLInstance node:internal/url:1492:23
+      1  100.0%            LazyCompile: ~fileURLToPath node:internal/url:1413:23
+      1    1.3%      LazyCompile: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/sdam/server.js:193:42
+      1  100.0%        LazyCompile: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/cmap/connection_pool.js:265:23
+      1  100.0%          LazyCompile: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/cmap/connection_pool.js:457:32
+      1  100.0%            LazyCompile: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/cmap/connection_pool.js:364:44
+      1    1.3%      LazyCompile: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/cmap/connection_pool.js:364:44
+      1  100.0%        LazyCompile: ~callback /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/cmap/connect.js:63:31
+      1  100.0%          LazyCompile: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/cmap/connect.js:88:85
+      1  100.0%            LazyCompile: ~onMessage /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/cmap/connection.js:152:14
+      1    1.3%      LazyCompile: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/log4js/lib/clustering.js:44:29
+      1  100.0%        LazyCompile: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/log4js/lib/configuration.js:46:21
+      1  100.0%          /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+      1  100.0%            LazyCompile: ~configure /home/esteban/Desktop/Backend/Entrega-16/node_modules/log4js/lib/configuration.js:37:19
+      1    1.3%      LazyCompile: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/graceful-fs/clone.js:18:52
+      1  100.0%        /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+      1  100.0%          LazyCompile: ~clone /home/esteban/Desktop/Backend/Entrega-16/node_modules/graceful-fs/clone.js:9:16
+      1  100.0%            Function: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/graceful-fs/graceful-fs.js:1:1
+      1    1.3%      Function: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/whatwg-url/lib/url-state-machine.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.3%      Function: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/saslprep/lib/memory-code-points.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.3%      Function: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.3%      Function: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/connection_string.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.3%      Function: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/handlebars/dist/cjs/handlebars.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.3%      Function: ^serializeInto /home/esteban/Desktop/Backend/Entrega-16/node_modules/bson/lib/parser/serializer.js:550:23
+      1  100.0%        Function: ^serializeObject /home/esteban/Desktop/Backend/Entrega-16/node_modules/bson/lib/parser/serializer.js:258:25
+      1  100.0%          Function: ^serializeInto /home/esteban/Desktop/Backend/Entrega-16/node_modules/bson/lib/parser/serializer.js:550:23
+      1  100.0%            LazyCompile: ~serialize /home/esteban/Desktop/Backend/Entrega-16/node_modules/bson/lib/bson.js:111:19
+      1    1.3%      Function: ^emit node:events:340:44
+      1  100.0%        LazyCompile: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/sdam/server.js:63:55
+      1  100.0%          Function: ^emit node:events:340:44
+      1  100.0%            LazyCompile: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/sdam/monitor.js:204:52
+
+     34    2.1%  fwrite
+     31   91.2%    /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+      3    9.7%      LazyCompile: ~toRealPath node:internal/modules/cjs/loader:393:20
+      3  100.0%        LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+      3  100.0%          LazyCompile: ~resolveMainPath node:internal/modules/run_main:11:25
+      3  100.0%            LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:74:31
+      3    9.7%      LazyCompile: ~createAppender /home/esteban/Desktop/Backend/Entrega-16/node_modules/log4js/lib/appenders/index.js:62:24
+      3  100.0%        LazyCompile: ~getAppender /home/esteban/Desktop/Backend/Entrega-16/node_modules/log4js/lib/appenders/index.js:48:21
+      3  100.0%          LazyCompile: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/log4js/lib/appenders/index.js:112:41
+      3  100.0%            /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+      3    9.7%      /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+      1   33.3%        LazyCompile: ~parseOptions /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/connection_string.js:208:22
+      1  100.0%          LazyCompile: ~MongoClient /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/mongo_client.js:60:16
+      1  100.0%            LazyCompile: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/lib/connection.js:781:31
+      1   33.3%        LazyCompile: ~defaultResolve node:internal/modules/esm/resolve:981:24
+      1  100.0%          LazyCompile: ~resolve node:internal/modules/esm/loader:402:16
+      1  100.0%            LazyCompile: ~getModuleJob node:internal/modules/esm/loader:221:21
+      1   33.3%        LazyCompile: ~Kareem.filter /home/esteban/Desktop/Backend/Entrega-16/node_modules/kareem/index.js:321:35
+      1  100.0%          LazyCompile: ~applyHooks /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/lib/helpers/model/applyHooks.js:32:20
+      1  100.0%            LazyCompile: ~compile /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/lib/model.js:4802:33
+      1    3.2%      Script: ~<anonymous> file:///home/esteban/Desktop/Backend/Entrega-16/src/server.js:1:1
+      1  100.0%        /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+      1  100.0%          /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+      1  100.0%            LazyCompile: ~run node:internal/modules/esm/module_job:180:12
+      1    3.2%      LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1017:18
+      1  100.0%        LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1  100.0%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:969:33
+      1    3.2%      LazyCompile: ~supportsOpMsg /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/cmap/connection.js:444:23
+      1  100.0%        LazyCompile: ~command /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/cmap/connection.js:254:12
+      1  100.0%          LazyCompile: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/cmap/connect.js:78:43
+      1  100.0%            LazyCompile: ~prepareHandshakeDocument /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/cmap/connect.js:146:34
+      1    3.2%      LazyCompile: ~setupWarningHandler node:internal/bootstrap/pre_execution:141:29
+      1  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      1  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    3.2%      LazyCompile: ~setStreamTimeout node:internal/stream_base_commons:254:26
+      1  100.0%        LazyCompile: ~makeConnection /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/cmap/connect.js:241:24
+      1  100.0%          LazyCompile: ~connect /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/cmap/connect.js:30:17
+      1  100.0%            LazyCompile: ~checkServer /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/sdam/monitor.js:139:21
+      1    3.2%      LazyCompile: ~realpathSync node:fs:2408:22
+      1  100.0%        LazyCompile: ~toRealPath node:internal/modules/cjs/loader:393:20
+      1  100.0%          LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%            LazyCompile: ~resolveMainPath node:internal/modules/run_main:11:25
+      1    3.2%      LazyCompile: ~processIncomingData /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/cmap/message_stream.js:79:29
+      1  100.0%        LazyCompile: ~_write /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/cmap/message_stream.js:26:11
+      1  100.0%          LazyCompile: ~writeOrBuffer node:internal/streams/writable:365:23
+      1  100.0%            LazyCompile: ~_write node:internal/streams/writable:283:16
+      1    3.2%      LazyCompile: ~performInitialHandshake /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/cmap/connect.js:62:33
+      1  100.0%        LazyCompile: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/cmap/connect.js:31:63
+      1  100.0%          LazyCompile: ~callback /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/cmap/connect.js:261:31
+      1  100.0%            LazyCompile: ~connectHandler /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/cmap/connect.js:305:28
+      1    3.2%      LazyCompile: ~patchProcessObject node:internal/bootstrap/pre_execution:81:28
+      1  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      1  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    3.2%      LazyCompile: ~onParseError node:internal/url:551:22
+      1  100.0%        /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+      1  100.0%          LazyCompile: ~URL node:internal/url:620:14
+      1  100.0%            LazyCompile: ~defaultResolve node:internal/modules/esm/resolve:981:24
+      1    3.2%      LazyCompile: ~nextTick node:internal/process/task_queues:104:18
+      1  100.0%        LazyCompile: ~construct node:internal/streams/destroy:225:19
+      1  100.0%          LazyCompile: ~Writable node:internal/streams/writable:219:18
+      1  100.0%            LazyCompile: ~WriteStream node:internal/fs/streams:306:21
+      1    3.2%      LazyCompile: ~keys /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb-connection-string-url/lib/index.js:57:13
+      1  100.0%        LazyCompile: ~parseOptions /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/connection_string.js:208:22
+      1  100.0%          LazyCompile: ~MongoClient /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/mongo_client.js:60:16
+      1  100.0%            LazyCompile: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/lib/connection.js:781:31
+      1    3.2%      LazyCompile: ~createHttpErrorConstructor /home/esteban/Desktop/Backend/Entrega-16/node_modules/http-errors/index.js:118:37
+      1  100.0%        Function: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/http-errors/index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1    3.2%      LazyCompile: ~construct node:internal/streams/destroy:225:19
+      1  100.0%        LazyCompile: ~Writable node:internal/streams/writable:219:18
+      1  100.0%          LazyCompile: ~WriteStream node:internal/fs/streams:306:21
+      1  100.0%            LazyCompile: ~WriteStream /home/esteban/Desktop/Backend/Entrega-16/node_modules/graceful-fs/graceful-fs.js:320:24
+      1    3.2%      LazyCompile: ~URLStateMachine /home/esteban/Desktop/Backend/Entrega-16/node_modules/whatwg-url/lib/url-state-machine.js:481:25
+      1  100.0%        LazyCompile: ~module.exports.basicURLParse /home/esteban/Desktop/Backend/Entrega-16/node_modules/whatwg-url/lib/url-state-machine.js:1206:41
+      1  100.0%          LazyCompile: ~URLImpl /home/esteban/Desktop/Backend/Entrega-16/node_modules/whatwg-url/lib/URL-impl.js:7:14
+      1  100.0%            LazyCompile: ~exports.setup /home/esteban/Desktop/Backend/Entrega-16/node_modules/whatwg-url/lib/URL.js:49:17
+      1    3.2%      LazyCompile: ~Long.compare /home/esteban/Desktop/Backend/Entrega-16/node_modules/bson/lib/long.js:292:39
+      1  100.0%        LazyCompile: ~compareTopologyVersion /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/sdam/server_description.js:184:32
+      1  100.0%          LazyCompile: ~isStaleServerDescription /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/sdam/topology.js:644:34
+      1  100.0%            LazyCompile: ~serverUpdateHandler /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/sdam/topology.js:360:24
+      1    3.2%      LazyCompile: ~Db /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/db.js:81:16
+      1  100.0%        LazyCompile: ~db /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/mongo_client.js:176:7
+      1  100.0%          LazyCompile: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/connect-mongo/build/main/lib/MongoStore.js:124:42
+      1  100.0%            /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+      1    3.2%      Function: ~<anonymous> node:internal/modules/cjs/helpers:1:1
+      1  100.0%        LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%          LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1  100.0%            Function: ~<anonymous> node:internal/source_map/source_map_cache:1:1
+      1    3.2%      Function: ~<anonymous> node:internal/fs/rimraf:1:1
+      1  100.0%        LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%          LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1  100.0%            Function: ~<anonymous> node:internal/fs/promises:1:1
+      1    3.2%      Function: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/sift/lib/index.js:138:50
+      1  100.0%        Function: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/sift/lib/index.js:5:19
+      1  100.0%          Function: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/sift/lib/index.js:1:11
+      1  100.0%            Function: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/sift/lib/index.js:1:1
+      1    3.2%      Function: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/debug/src/node.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1  100.0%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:969:33
+      1    3.2%      Function: ^SafeIterator node:internal/per_context/primordials:270:16
+      1  100.0%        LazyCompile: ~debug node:internal/util/debuglog:76:15
+      1  100.0%          LazyCompile: ~logger node:internal/util/debuglog:96:18
+      1  100.0%            LazyCompile: ~Module._resolveLookupPaths node:internal/modules/cjs/loader:667:38
+
+     28    1.7%  /usr/lib/x86_64-linux-gnu/libc-2.31.so
+     24   85.7%    /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+      5   20.8%      /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+      1   20.0%        Function: ^readPackage node:internal/modules/cjs/loader:290:21
+      1  100.0%          Function: ^readPackageScope node:internal/modules/cjs/loader:321:26
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1   20.0%        Function: ^normalizeString node:path:66:25
+      1  100.0%          Function: ^resolve node:path:1091:10
+      1  100.0%            Function: ^pathToFileURL node:internal/url:1455:23
+      1   20.0%        Function: ^compileFunction node:vm:308:25
+      1  100.0%          Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1   20.0%        Function: ^FastBuffer node:internal/buffer:958:14
+      1  100.0%          Function: ^createUnsafeBuffer node:internal/buffer:1059:28
+      1  100.0%            Function: ^allocate node:buffer:397:18
+      1   20.0%        Function: ^<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/lib/helpers/pluralize.js:86:34
+      1  100.0%          /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+      1  100.0%            LazyCompile: ~pluralize /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/lib/helpers/pluralize.js:82:19
+      2    8.3%      LazyCompile: ~onParseError node:internal/url:551:22
+      2  100.0%        /home/esteban/.nvm/versions/node/v16.13.1/bin/node
+      2  100.0%          LazyCompile: ~URL node:internal/url:620:14
+      2  100.0%            LazyCompile: ~defaultResolve node:internal/modules/esm/resolve:981:24
+      2    8.3%      LazyCompile: *readPackageScope node:internal/modules/cjs/loader:321:26
+      1   50.0%        Function: ^trySelf node:internal/modules/cjs/loader:441:17
+      1  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1   50.0%        Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1  100.0%          Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      2    8.3%      Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      2  100.0%        Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      2  100.0%          Function: ^require node:internal/modules/cjs/helpers:101:31
+      1   50.0%            Function: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/lib/document.js:1:1
+      1   50.0%            Function: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/log4js/lib/appenders/index.js:1:1
+      1    4.2%      LazyCompile: ~wrapfunction /home/esteban/Desktop/Backend/Entrega-16/node_modules/depd/index.js:397:23
+      1  100.0%        Function: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/express/lib/utils.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1    4.2%      LazyCompile: ~resolveBSONOptions /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/bson.js:53:28
+      1  100.0%        LazyCompile: ~resolveOptions /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/utils.js:739:24
+      1  100.0%          LazyCompile: ~createCollection /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/db.js:153:21
+      1  100.0%            LazyCompile: ~createCollection /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/lib/connection.js:399:82
+      1    4.2%      LazyCompile: ~realpathSync node:fs:2408:22
+      1  100.0%        LazyCompile: ~toRealPath node:internal/modules/cjs/loader:393:20
+      1  100.0%          LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%            LazyCompile: ~resolveMainPath node:internal/modules/run_main:11:25
+      1    4.2%      LazyCompile: ~get isPinned /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/sessions.js:126:17
+      1  100.0%        LazyCompile: ~executeWithServerSelection /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/operations/execute_operation.js:76:36
+      1  100.0%          LazyCompile: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/operations/execute_operation.js:16:48
+      1  100.0%            LazyCompile: ~maybePromise /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongodb/lib/utils.js:398:22
+      1    4.2%      LazyCompile: ~formatRaw node:internal/util/inspect:796:19
+      1  100.0%        LazyCompile: ~formatValue node:internal/util/inspect:726:21
+      1  100.0%          LazyCompile: ~inspect node:internal/util/inspect:286:17
+      1  100.0%            LazyCompile: ~createAppender /home/esteban/Desktop/Backend/Entrega-16/node_modules/log4js/lib/appenders/index.js:62:24
+      1    4.2%      LazyCompile: ~createTopology /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/operations/connect.js:44:24
+      1  100.0%        LazyCompile: ~connect /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/operations/connect.js:8:17
+      1  100.0%          LazyCompile: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/mongo_client.js:126:52
+      1  100.0%            LazyCompile: ~maybePromise /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/utils.js:397:22
+      1    4.2%      LazyCompile: ~Module._extensions..json node:internal/modules/cjs/loader:1158:39
+      1  100.0%        Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      1    4.2%      LazyCompile: ~Duplex node:internal/streams/duplex:52:16
+      1  100.0%        LazyCompile: ~Socket node:net:283:16
+      1  100.0%          LazyCompile: ~WriteStream node:tty:85:21
+      1  100.0%            LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:41:35
+      1    4.2%      LazyCompile: *realpathSync node:fs:2408:22
+      1  100.0%        Function: ^toRealPath node:internal/modules/cjs/loader:393:20
+      1  100.0%          Function: ^tryFile node:internal/modules/cjs/loader:384:17
+      1  100.0%            Function: ^tryExtensions node:internal/modules/cjs/loader:400:23
+      1    4.2%      Function: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/streamroller/node_modules/fs-extra/lib/mkdirs/index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    4.2%      Function: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:6:28
+      1  100.0%        Function: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1    4.2%      Function: ^realpathSync node:fs:2408:22
+      1  100.0%        Function: ^toRealPath node:internal/modules/cjs/loader:393:20
+      1  100.0%          Function: ^tryFile node:internal/modules/cjs/loader:384:17
+      1  100.0%            LazyCompile: ~tryPackage node:internal/modules/cjs/loader:338:20
+      1    4.2%      Function: ^emit node:events:340:44
+      1  100.0%        LazyCompile: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/sdam/monitor.js:200:52
+      1  100.0%          LazyCompile: ~callback /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/cmap/connect.js:63:31
+      1  100.0%            LazyCompile: ~<anonymous> /home/esteban/Desktop/Backend/Entrega-16/node_modules/mongoose/node_modules/mongodb/lib/cmap/connect.js:88:85
+
