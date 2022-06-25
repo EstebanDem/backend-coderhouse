@@ -1,6 +1,6 @@
 import express from "express";
 const router = express.Router();
-import {UsuarioDao} from '../dao/UsuarioDao.js';
+import {UsuarioDao} from '../dao/usuario.dao.js';
 import { sendGmail } from "../notifications/gmail/EmailSender.js";
 import { htmlNewUserTemplate } from "../notifications/gmail/htmltemplates/NewUserCreatedTemplate.js";
 

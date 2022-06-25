@@ -1,5 +1,5 @@
 import express from "express";
-import { ProductoDao } from "../dao/ProductoDao.js";
+import { ProductoDao } from "../dao/producto.dao.js";
 import auth from "../middlewares/auth.middleware.js";
 const router = express.Router();
 const productoDao = new ProductoDao();

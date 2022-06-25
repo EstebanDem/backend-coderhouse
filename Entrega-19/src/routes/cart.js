@@ -1,6 +1,6 @@
 import express from "express";
-import { CarritoDao } from "../dao/CarritoDao.js";
-import { ProductoDao } from "../dao/ProductoDao.js";
+import { CarritoDao } from "../dao/carrito.dao.js";
+import { ProductoDao } from "../dao/producto.dao.js";
 import logger from "../loggers/Log4jsLogger.js";
 
 const router = express.Router();
