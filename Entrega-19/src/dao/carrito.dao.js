@@ -1,4 +1,4 @@
-import "../config/db.config.js";
+import "../configs/db.config.js";
 import { CarritosModel } from '../models/carritos.model.js';
 import logger from "../loggers/Log4jsLogger.js";
 export class CarritoDao {

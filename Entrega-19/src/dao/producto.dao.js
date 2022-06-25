@@ -1,4 +1,4 @@
-import "../config/db.config.js";
+import "../configs/db.config.js";
 import { ProductosModel } from "../models/productos.model.js";
 import logger from "../loggers/Log4jsLogger.js";
 
