@@ -1,4 +1,4 @@
-import "../config/db.js";
+import "../config/db.config.js";
 import { UsuariosModel } from "../models/usuarios.model.js";
 import logger from "../loggers/Log4jsLogger.js";
 
