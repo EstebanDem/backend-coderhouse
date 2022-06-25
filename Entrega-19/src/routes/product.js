@@ -1,9 +1,8 @@
 import express from "express";
 import { ProductoDao } from "../dao/ProductoDao.js";
-import { authMiddleware } from "../middlewares/Auth.js";
+import auth from "../middlewares/auth.middleware.js";
 const router = express.Router();
 const productoDao = new ProductoDao();
-import logger from "../loggers/Log4jsLogger.js";
 
 // GET api/productos
 
@@ -29,7 +28,7 @@ router.get('/:id', async(req, res) => {
 
 
 // POST api/productos
-router.post('/', authMiddleware, async (req,res) => {
+router.post('/', auth, async (req,res) => {
     const { body } = req;
     const newProduct = await productoDao.createProduct(body);
     
@@ -40,7 +39,7 @@ router.post('/', authMiddleware, async (req,res) => {
 })
 
 // PUT api/productos/:id
-router.put('/:id', authMiddleware, async (req,res) => {
+router.put('/:id', auth, async (req,res) => {
     const { id } = req.params;
     const { body } = req;
     const wasUpdated = await productoDao.updateProductById(id, body);
@@ -53,7 +52,7 @@ router.put('/:id', authMiddleware, async (req,res) => {
 
 // DELETE /api/productos/id
 
-router.delete('/:id', authMiddleware, async (req,res) => {
+router.delete('/:id', auth, async (req,res) => {
     const { id } = req.params;
     const wasDeleted = await productoDao.deleteProductById(id)
 
