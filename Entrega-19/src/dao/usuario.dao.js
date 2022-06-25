@@ -1,5 +1,5 @@
 import "../config/db.js";
-import { UsuariosModel } from "../modules/usuarios.modules.js";
+import { UsuariosModel } from "../models/usuarios.model.js";
 import logger from "../loggers/Log4jsLogger.js";
 
 export class UsuarioDao {

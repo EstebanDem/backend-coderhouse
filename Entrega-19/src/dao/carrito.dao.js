@@ -1,5 +1,5 @@
 import "../config/db.js";
-import { CarritosModel } from '../modules/carritos.modules.js';
+import { CarritosModel } from '../models/carritos.modules.js';
 import logger from "../loggers/Log4jsLogger.js";
 export class CarritoDao {
 

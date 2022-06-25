@@ -1,5 +1,5 @@
 import "../config/db.js";
-import { ProductosModel } from "../modules/productos.modules.js";
+import { ProductosModel } from "../models/productos.model.js";
 import logger from "../loggers/Log4jsLogger.js";
 
 export class ProductoDao {
