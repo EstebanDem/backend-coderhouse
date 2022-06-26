@@ -1,66 +1,16 @@
 import express from "express";
-import { ProductoDao } from "../dao/producto.dao.js";
 import auth from "../middlewares/auth.middleware.js";
+import * as productController from '../controllers/product.controller.js'
+
 const router = express.Router();
-const productoDao = new ProductoDao();
 
-// GET api/productos
+router.get('/', productController.getAll);
+router.get('/:id', productController.getById);
 
-router.get('/', async (_req, res) => {
-    const products = await productoDao.getAll();
-    products
-        ? res.status(200).json(products)
-        : res.status(400).json({"error": "there was a problem when trying to get the products"})
-    
-})
+router.post('/', auth, productController.create);
 
-// GET api/productos/:id
+router.put('/:id', auth, productController.update);
 
-router.get('/:id', async(req, res) => {
-    const { id } = req.params;
-    const product = await productoDao.getProductById(id);
-    
-    product
-        ? res.status(200).json(product)
-        : res.status(400).json({"error": "product not found"})
-    
-})
-
-
-// POST api/productos
-router.post('/', auth, async (req,res) => {
-    const { body } = req;
-    const newProduct = await productoDao.createProduct(body);
-    
-    newProduct
-        ? res.status(200).json({"success": "Product added with ID " + newProduct._id})
-        : res.status(400).json({"error": "there was an error, please verify the body content match the schema"})
-    
-})
-
-// PUT api/productos/:id
-router.put('/:id', auth, async (req,res) => {
-    const { id } = req.params;
-    const { body } = req;
-    const wasUpdated = await productoDao.updateProductById(id, body);
-    
-    wasUpdated
-        ? res.status(200).json({"success" : "product updated"})
-        : res.status(404).json({"error": "product not found or invalid body content."}) 
-})
-
-
-// DELETE /api/productos/id
-
-router.delete('/:id', auth, async (req,res) => {
-    const { id } = req.params;
-    const wasDeleted = await productoDao.deleteProductById(id)
-
-    wasDeleted 
-        ? res.status(200).json({"success": "product successfully removed"})
-        : res.status(404).json({"error": "product not found"})
-})
-
-
+router.delete('/:id', auth, productController.remove);
 
 export default router;
