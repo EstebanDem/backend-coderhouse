@@ -1,4 +1,4 @@
-import {UsuarioDao} from '../dao/usuario.dao.js';
+import {UsuarioDao} from '../services/usuario.dao.js';
 import {sendGmail} from "../utils/notifications/gmail/EmailSender.js";
 import {htmlNewUserTemplate} from "../utils/notifications/gmail/htmltemplates/NewUserCreatedTemplate.js";
 

@@ -1,4 +1,4 @@
-import {ProductoDao} from "../dao/producto.dao.js";
+import {ProductoDao} from "../services/producto.dao.js";
 
 const productoDao = new ProductoDao();
 

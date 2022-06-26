@@ -1,5 +1,5 @@
-import {CarritoDao} from "../dao/carrito.dao.js";
-import {ProductoDao} from "../dao/producto.dao.js";
+import {CarritoDao} from "../services/carrito.dao.js";
+import {ProductoDao} from "../services/producto.dao.js";
 
 const carritoDao = new CarritoDao();
 
