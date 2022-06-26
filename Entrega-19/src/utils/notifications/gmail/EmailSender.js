@@ -1,5 +1,5 @@
 import {createTransport} from 'nodemailer';
-import logger from '../../loggers/Log4jsLogger.js';
+import logger from '../../../loggers/Log4jsLogger.js';
 import dotenv from 'dotenv';
 
 dotenv.config({path: '../../.env' });

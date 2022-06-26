@@ -1,6 +1,6 @@
 import {UsuarioDao} from '../dao/usuario.dao.js';
-import {sendGmail} from "../notifications/gmail/EmailSender.js";
-import {htmlNewUserTemplate} from "../notifications/gmail/htmltemplates/NewUserCreatedTemplate.js";
+import {sendGmail} from "../utils/notifications/gmail/EmailSender.js";
+import {htmlNewUserTemplate} from "../utils/notifications/gmail/htmltemplates/NewUserCreatedTemplate.js";
 
 const userDao = new UsuarioDao();
 
