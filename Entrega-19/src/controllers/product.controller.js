@@ -1,9 +1,9 @@
-import {ProductoDao} from "../services/producto.dao.js";
+import {ProductoService} from "../services/producto.service.js";
 
-const productoDao = new ProductoDao();
+const productoService = new ProductoService();
 
 export async function getAll(req, res) {
-    const products = await productoDao.getAll();
+    const products = await productoService.getAll();
     products
         ? res.status(200).json(products)
         : res.status(400).json({"error": "there was a problem when trying to get the products"})
@@ -11,7 +11,7 @@ export async function getAll(req, res) {
 
 export async function getById(req, res) {
     const {id} = req.params;
-    const product = await productoDao.getProductById(id);
+    const product = await productoService.getProductById(id);
 
     product
         ? res.status(200).json(product)
@@ -20,7 +20,7 @@ export async function getById(req, res) {
 
 export async function create(req, res) {
     const {body} = req;
-    const newProduct = await productoDao.createProduct(body);
+    const newProduct = await productoService.createProduct(body);
 
     newProduct
         ? res.status(200).json({"success": "Product added with ID " + newProduct._id})
@@ -30,7 +30,7 @@ export async function create(req, res) {
 export async function update(req, res) {
     const {id} = req.params;
     const {body} = req;
-    const wasUpdated = await productoDao.updateProductById(id, body);
+    const wasUpdated = await productoService.updateProductById(id, body);
 
     wasUpdated
         ? res.status(200).json({"success": "product updated"})
@@ -39,7 +39,7 @@ export async function update(req, res) {
 
 export async function remove(req, res) {
     const {id} = req.params;
-    const wasDeleted = await productoDao.deleteProductById(id)
+    const wasDeleted = await productoService.deleteProductById(id)
 
     wasDeleted
         ? res.status(200).json({"success": "product successfully removed"})

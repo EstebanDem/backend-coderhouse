@@ -1,8 +1,8 @@
-import {UsuarioDao} from '../services/usuario.dao.js';
+import {UsuarioService} from '../services/usuario.service.js';
 import {sendGmail} from "../utils/notifications/gmail/EmailSender.js";
 import {htmlNewUserTemplate} from "../utils/notifications/gmail/htmltemplates/NewUserCreatedTemplate.js";
 
-const userDao = new UsuarioDao();
+const usuarioService = new UsuarioService();
 
 export async function logInView(req, res) {
     if (req.session.login) {
@@ -22,7 +22,7 @@ export async function signUpView(req, res) {
 
 export async function signUp(req, res) {
     const { body } = req;
-    const newUser = await userDao.createUser(body);
+    const newUser = await usuarioService.createUser(body);
 
     if (newUser) {
         // Descomentar si has llenado el .env con tu email y password de Gmail.
@@ -40,7 +40,7 @@ export async function signUp(req, res) {
 
 export async function logIn(req, res) {
     const {user, pass} = req.body;
-    const loggedUser = await userDao.loginUser({
+    const loggedUser = await usuarioService.loginUser({
         username: user,
         password: pass
     });
