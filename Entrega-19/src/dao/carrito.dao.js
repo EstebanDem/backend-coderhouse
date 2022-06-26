@@ -1,6 +1,6 @@
 import "../configs/db.config.js";
 import { CarritosModel } from '../models/carritos.model.js';
-import logger from "../loggers/Log4jsLogger.js";
+import logger from "../utils/loggers/Log4jsLogger.js";
 export class CarritoDao {
 
     ID_FIELD = "_id";

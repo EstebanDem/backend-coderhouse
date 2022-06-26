@@ -10,7 +10,7 @@ import {fileURLToPath} from 'url';
 import mongoStore from 'connect-mongo';
 import compression from 'compression';
 import minimist from 'minimist';
-import logger from "./loggers/Log4jsLogger.js";
+import logger from "./utils/loggers/Log4jsLogger.js";
 import loggerMiddleware from "./middlewares/routesLogger.middleware.js";
 const app = express();
 
