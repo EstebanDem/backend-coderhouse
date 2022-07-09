@@ -7,6 +7,10 @@ export class UsuarioService {
     ID_FIELD = "_id";
     USERNAME_FIELD = 'username';
 
+    static getInstance() {
+        return new UsuarioService();
+    }
+
     constructor() {
         if(typeof UsuarioService.instance === 'object') {
             return UsuarioService.instance;

@@ -6,6 +6,10 @@ export class CarritoService extends BaseDao {
 
     ID_FIELD = "_id";
 
+    static getInstance() {
+        return new CarritoService();
+    }
+
     constructor() {
         if(typeof CarritoService.instance === 'object') {
             return CarritoService.instance;

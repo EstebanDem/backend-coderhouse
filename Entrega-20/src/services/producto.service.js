@@ -5,6 +5,10 @@ export class ProductoService extends BaseDao{
 
     ID_FIELD = "_id";
 
+    static getInstance() {
+        return new ProductoService();
+    }
+
     constructor() {
         if(typeof ProductoService.instance === 'object') {
             return ProductoService.instance;

@@ -1,6 +1,6 @@
 import {ProductoService} from "../services/producto.service.js";
 
-const productoService = new ProductoService();
+const productoService = ProductoService.getInstance();
 
 export async function getAll(req, res) {
     const products = await productoService.getAll();

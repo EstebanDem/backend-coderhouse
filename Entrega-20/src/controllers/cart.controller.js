@@ -1,7 +1,7 @@
 import {CarritoService} from "../services/carrito.service.js";
 import {ProductoService} from "../services/producto.service.js";
 
-const carritoService = new CarritoService();
+const carritoService = CarritoService.getInstance();
 
 export async function create(req, res) {
     const newCart = await carritoService.create();
