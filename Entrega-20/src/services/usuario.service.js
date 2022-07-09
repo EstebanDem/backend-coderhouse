@@ -6,6 +6,14 @@ export class UsuarioService {
 
     ID_FIELD = "_id";
     USERNAME_FIELD = 'username';
+
+    constructor() {
+        if(typeof UsuarioService.instance === 'object') {
+            return UsuarioService.instance;
+        }
+        UsuarioService.instance = this;
+        return this;
+    }
     
     async createUser(object) {
         try {

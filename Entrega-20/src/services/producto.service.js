@@ -4,6 +4,15 @@ import {BaseDao} from "./BaseDao.js";
 export class ProductoService extends BaseDao{
 
     ID_FIELD = "_id";
+
+    constructor() {
+        if(typeof ProductoService.instance === 'object') {
+            return ProductoService.instance;
+        }
+        super();
+        ProductoService.instance = this;
+        return this;
+    }
     
     static async exists(id) {
         try {

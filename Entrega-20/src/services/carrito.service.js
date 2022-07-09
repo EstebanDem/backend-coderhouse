@@ -1,10 +1,20 @@
 import { CarritosModel } from '../models/carritos.model.js';
 import {BaseDao} from "./BaseDao.js";
+import {ProductoService} from "./producto.service.js";
 
 export class CarritoService extends BaseDao {
 
     ID_FIELD = "_id";
-    
+
+    constructor() {
+        if(typeof CarritoService.instance === 'object') {
+            return CarritoService.instance;
+        }
+        super();
+        CarritoService.instance = this;
+        return this;
+    }
+
     async create() {
         try {
             return await CarritosModel.create({});
