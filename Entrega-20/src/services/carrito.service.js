@@ -1,28 +1,37 @@
-import "../configs/db.config.js";
 import { CarritosModel } from '../models/carritos.model.js';
-import logger from "../utils/loggers/Log4jsLogger.js";
-export class CarritoService {
+import {BaseDao} from "./BaseDao.js";
+
+export class CarritoService extends BaseDao {
 
     ID_FIELD = "_id";
     
-    async createCart() {
+    async create() {
         try {
             return await CarritosModel.create({});
         } catch (error) {
-            logger.error(error);
+            this.logger.error(error);
+            return false;
+        }
+    }
+
+    async getAll() {
+        try {
+            return await CarritosModel.find();
+        } catch (error) {
+            this.logger.error(error);
             return false;
         }
     }
     
-    async deleteCartById(id) {
+    async deleteById(id) {
         try {
             return await CarritosModel.findByIdAndDelete({[this.ID_FIELD]: id})
         } catch (error) {
-            logger.error(error);
+            this.logger.error(error);
             return false;
         }
     }
-    // 6254bf5bdb4015399b45c35f
+
     async saveProductToCart(id, obj) {
         try {
             const cart = await CarritosModel.findById(id)
@@ -30,7 +39,7 @@ export class CarritoService {
             cart.save();
             return true;
         } catch (error) {
-            logger.error(error);
+            this.logger.error(error);
             return false;
         }
     }
@@ -42,7 +51,7 @@ export class CarritoService {
             cart.save();
             return true;
         } catch (error) {
-            logger.error(error);
+            this.logger.error(error);
             return false;
         }
     }
@@ -51,7 +60,7 @@ export class CarritoService {
         try {
             return await CarritosModel.findById(id).populate('products').select({products: 1, _id:0});
         } catch (error) {
-            logger.error(error);
+            this.logger.error(error);
             return false;
         }
     }
