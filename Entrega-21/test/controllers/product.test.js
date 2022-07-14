@@ -9,7 +9,7 @@ test('[GET] api/productos/:non-existent-id returns product not found', async() =
 
 });
 
-test('[PUT] api/productos/:non-existent-id returns product not found', async() => {
+test('[PUT] api/productos/:non-existent-id returns product not found or invalid body content', async() => {
     const nonExistentProductUrl = 'http://localhost:3031/api/productos/non-existent-id';
     const body = {}
     const response = await axiosPut(nonExistentProductUrl, body);
