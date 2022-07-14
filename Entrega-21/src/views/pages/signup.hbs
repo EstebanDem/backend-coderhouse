@@ -1,0 +1,38 @@
+<h2>Sign Up</h2>
+<span class="small text-secondary">Please fill the form below to create an account.</span>
+<div class="row g-3">
+
+    <form class="row g-3" action="/api/usuario/signup" method="POST"> 
+    
+        <div class="col-sm-3">
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="basic-addon1">Usuario</span>
+                <input type="text" name="username" required class="form-control" placeholder="Usuario" aria-label="Usuario" aria-describedby="basic-addon1">
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="basic-addon2">Email</span>
+                <input type="email" name="email" required class="form-control" placeholder="Email account" aria-label="Email" aria-describedby="basic-addon1">
+            </div>
+        </div>
+
+
+        <div class="col-sm-3">
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="basic-addon2">Contraseña</span>
+                <input type="password" name="password" required class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
+            </div>
+        </div>
+
+        <div class="col-sm-2">
+            <div class="d-grid gap-2">
+                <button class="btn btn-primary btn-sm" type="submit">Create account</button>
+            </div>
+        </div>
+
+
+
+    </form>
+</div>

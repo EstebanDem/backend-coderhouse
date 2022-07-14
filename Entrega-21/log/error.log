@@ -1,0 +1,830 @@
+[2022-06-25T21:38:45.706] [ERROR] default - Error: listen EADDRINUSE: address already in use :::3031
+    at Server.setupListenHandle [as _listen2] (node:net:1334:16)
+    at listenInCluster (node:net:1382:12)
+    at Server.listen (node:net:1469:7)
+    at Function.listen (/home/esteban/Desktop/Backend/Entrega-19/node_modules/express/lib/application.js:618:24)
+    at file:///home/esteban/Desktop/Backend/Entrega-19/src/server.js:81:20
+    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)
+    at async Promise.all (index 0)
+    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)
+    at async loadESM (node:internal/process/esm_loader:88:5)
+    at async handleMainPromise (node:internal/modules/run_main:65:12) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 3031
+}
+[2022-07-13T21:45:08.684] [ERROR] default - CastError: Cast to ObjectId failed for value "a" (type string) at path "_id" for model "productos"
+    at model.Query.exec (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4715:21)
+    at model.Query.Query.then (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4814:15) {
+  messageFormat: undefined,
+  stringValue: '"a"',
+  kind: 'ObjectId',
+  value: 'a',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/error.js:41:28)
+      at new ObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/objectid.js:67:23)
+      at castObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast/objectid.js:24:12)
+      at ObjectId.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schema/objectid.js:247:12)
+      at ObjectId.SchemaType.applySetters (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1590:20)
+      at cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast.js:344:32)
+      at model.Query.Query.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:5137:12),
+  valueType: 'string'
+}
+[2022-07-13T21:48:55.186] [ERROR] default - CastError: Cast to ObjectId failed for value "non-existent-id" (type string) at path "_id" for model "productos"
+    at model.Query.exec (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4715:21)
+    at model.Query.Query.then (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4814:15) {
+  messageFormat: undefined,
+  stringValue: '"non-existent-id"',
+  kind: 'ObjectId',
+  value: 'non-existent-id',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/error.js:41:28)
+      at new ObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/objectid.js:67:23)
+      at castObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast/objectid.js:24:12)
+      at ObjectId.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schema/objectid.js:247:12)
+      at ObjectId.SchemaType.applySetters (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1590:20)
+      at cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast.js:344:32)
+      at model.Query.Query.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:5137:12),
+  valueType: 'string'
+}
+[2022-07-13T21:49:18.639] [ERROR] default - CastError: Cast to ObjectId failed for value "non-existent-id" (type string) at path "_id" for model "productos"
+    at model.Query.exec (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4715:21)
+    at model.Query.Query.then (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4814:15) {
+  messageFormat: undefined,
+  stringValue: '"non-existent-id"',
+  kind: 'ObjectId',
+  value: 'non-existent-id',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/error.js:41:28)
+      at new ObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/objectid.js:67:23)
+      at castObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast/objectid.js:24:12)
+      at ObjectId.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schema/objectid.js:247:12)
+      at ObjectId.SchemaType.applySetters (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1590:20)
+      at cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast.js:344:32)
+      at model.Query.Query.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:5137:12),
+  valueType: 'string'
+}
+[2022-07-13T21:50:27.879] [ERROR] default - CastError: Cast to ObjectId failed for value "non-existent-id" (type string) at path "_id" for model "productos"
+    at model.Query.exec (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4715:21)
+    at model.Query.Query.then (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4814:15) {
+  messageFormat: undefined,
+  stringValue: '"non-existent-id"',
+  kind: 'ObjectId',
+  value: 'non-existent-id',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/error.js:41:28)
+      at new ObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/objectid.js:67:23)
+      at castObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast/objectid.js:24:12)
+      at ObjectId.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schema/objectid.js:247:12)
+      at ObjectId.SchemaType.applySetters (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1590:20)
+      at cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast.js:344:32)
+      at model.Query.Query.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:5137:12),
+  valueType: 'string'
+}
+[2022-07-13T21:51:13.202] [ERROR] default - CastError: Cast to ObjectId failed for value "non-existent-id" (type string) at path "_id" for model "productos"
+    at model.Query.exec (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4715:21)
+    at model.Query.Query.then (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4814:15) {
+  messageFormat: undefined,
+  stringValue: '"non-existent-id"',
+  kind: 'ObjectId',
+  value: 'non-existent-id',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/error.js:41:28)
+      at new ObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/objectid.js:67:23)
+      at castObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast/objectid.js:24:12)
+      at ObjectId.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schema/objectid.js:247:12)
+      at ObjectId.SchemaType.applySetters (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1590:20)
+      at cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast.js:344:32)
+      at model.Query.Query.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:5137:12),
+  valueType: 'string'
+}
+[2022-07-13T21:53:59.113] [ERROR] default - CastError: Cast to ObjectId failed for value "non-existent-id" (type string) at path "_id" for model "productos"
+    at model.Query.exec (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4715:21)
+    at model.Query.Query.then (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4814:15) {
+  messageFormat: undefined,
+  stringValue: '"non-existent-id"',
+  kind: 'ObjectId',
+  value: 'non-existent-id',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/error.js:41:28)
+      at new ObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/objectid.js:67:23)
+      at castObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast/objectid.js:24:12)
+      at ObjectId.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schema/objectid.js:247:12)
+      at ObjectId.SchemaType.applySetters (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1590:20)
+      at cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast.js:344:32)
+      at model.Query.Query.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:5137:12),
+  valueType: 'string'
+}
+[2022-07-13T21:54:22.245] [ERROR] default - CastError: Cast to ObjectId failed for value "non-existent-id" (type string) at path "_id" for model "productos"
+    at model.Query.exec (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4715:21)
+    at model.Query.Query.then (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4814:15) {
+  messageFormat: undefined,
+  stringValue: '"non-existent-id"',
+  kind: 'ObjectId',
+  value: 'non-existent-id',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/error.js:41:28)
+      at new ObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/objectid.js:67:23)
+      at castObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast/objectid.js:24:12)
+      at ObjectId.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schema/objectid.js:247:12)
+      at ObjectId.SchemaType.applySetters (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1590:20)
+      at cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast.js:344:32)
+      at model.Query.Query.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:5137:12),
+  valueType: 'string'
+}
+[2022-07-13T21:55:00.275] [ERROR] default - CastError: Cast to ObjectId failed for value "non-existent-id" (type string) at path "_id" for model "productos"
+    at model.Query.exec (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4715:21)
+    at model.Query.Query.then (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4814:15) {
+  messageFormat: undefined,
+  stringValue: '"non-existent-id"',
+  kind: 'ObjectId',
+  value: 'non-existent-id',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/error.js:41:28)
+      at new ObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/objectid.js:67:23)
+      at castObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast/objectid.js:24:12)
+      at ObjectId.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schema/objectid.js:247:12)
+      at ObjectId.SchemaType.applySetters (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1590:20)
+      at cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast.js:344:32)
+      at model.Query.Query.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:5137:12),
+  valueType: 'string'
+}
+[2022-07-13T21:55:39.084] [ERROR] default - CastError: Cast to ObjectId failed for value "non-existent-id" (type string) at path "_id" for model "productos"
+    at model.Query.exec (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4715:21)
+    at model.Query.Query.then (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4814:15) {
+  messageFormat: undefined,
+  stringValue: '"non-existent-id"',
+  kind: 'ObjectId',
+  value: 'non-existent-id',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/error.js:41:28)
+      at new ObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/objectid.js:67:23)
+      at castObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast/objectid.js:24:12)
+      at ObjectId.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schema/objectid.js:247:12)
+      at ObjectId.SchemaType.applySetters (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1590:20)
+      at cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast.js:344:32)
+      at model.Query.Query.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:5137:12),
+  valueType: 'string'
+}
+[2022-07-13T21:55:47.537] [ERROR] default - CastError: Cast to ObjectId failed for value "non-existent-id" (type string) at path "_id" for model "productos"
+    at model.Query.exec (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4715:21)
+    at model.Query.Query.then (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4814:15) {
+  messageFormat: undefined,
+  stringValue: '"non-existent-id"',
+  kind: 'ObjectId',
+  value: 'non-existent-id',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/error.js:41:28)
+      at new ObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/objectid.js:67:23)
+      at castObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast/objectid.js:24:12)
+      at ObjectId.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schema/objectid.js:247:12)
+      at ObjectId.SchemaType.applySetters (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1590:20)
+      at cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast.js:344:32)
+      at model.Query.Query.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:5137:12),
+  valueType: 'string'
+}
+[2022-07-13T22:00:51.709] [ERROR] default - CastError: Cast to ObjectId failed for value "{ _id: 'non-existent-id' }" (type Object) at path "_id" for model "productos"
+    at model.Query.exec (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4715:21)
+    at model.Query.Query.then (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4814:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  messageFormat: undefined,
+  stringValue: `"{ _id: 'non-existent-id' }"`,
+  kind: 'ObjectId',
+  value: { _id: 'non-existent-id' },
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/error.js:41:28)
+      at new ObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/objectid.js:67:23)
+      at castObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast/objectid.js:19:14)
+      at ObjectId.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schema/objectid.js:247:12)
+      at ObjectId.SchemaType.applySetters (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1590:20)
+      at cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast.js:288:34)
+      at model.Query.Query.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:5137:12),
+  valueType: 'Object'
+}
+[2022-07-13T22:01:02.597] [ERROR] default - CastError: Cast to ObjectId failed for value "{ _id: 'non-existent-id' }" (type Object) at path "_id" for model "productos"
+    at model.Query.exec (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4715:21)
+    at model.Query.Query.then (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4814:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  messageFormat: undefined,
+  stringValue: `"{ _id: 'non-existent-id' }"`,
+  kind: 'ObjectId',
+  value: { _id: 'non-existent-id' },
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/error.js:41:28)
+      at new ObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/objectid.js:67:23)
+      at castObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast/objectid.js:19:14)
+      at ObjectId.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schema/objectid.js:247:12)
+      at ObjectId.SchemaType.applySetters (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1590:20)
+      at cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast.js:288:34)
+      at model.Query.Query.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:5137:12),
+  valueType: 'Object'
+}
+[2022-07-13T22:01:14.995] [ERROR] default - CastError: Cast to ObjectId failed for value "{ _id: 'non-existent-id' }" (type Object) at path "_id" for model "productos"
+    at model.Query.exec (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4715:21)
+    at model.Query.Query.then (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4814:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  messageFormat: undefined,
+  stringValue: `"{ _id: 'non-existent-id' }"`,
+  kind: 'ObjectId',
+  value: { _id: 'non-existent-id' },
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/error.js:41:28)
+      at new ObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/objectid.js:67:23)
+      at castObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast/objectid.js:19:14)
+      at ObjectId.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schema/objectid.js:247:12)
+      at ObjectId.SchemaType.applySetters (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1590:20)
+      at cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast.js:288:34)
+      at model.Query.Query.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:5137:12),
+  valueType: 'Object'
+}
+[2022-07-13T22:01:55.590] [ERROR] default - CastError: Cast to ObjectId failed for value "non-existent-id" (type string) at path "_id" for model "productos"
+    at model.Query.exec (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4715:21)
+    at model.Query.Query.then (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4814:15) {
+  messageFormat: undefined,
+  stringValue: '"non-existent-id"',
+  kind: 'ObjectId',
+  value: 'non-existent-id',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/error.js:41:28)
+      at new ObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/objectid.js:67:23)
+      at castObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast/objectid.js:24:12)
+      at ObjectId.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schema/objectid.js:247:12)
+      at ObjectId.SchemaType.applySetters (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1590:20)
+      at cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast.js:344:32)
+      at model.Query.Query.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:5137:12),
+  valueType: 'string'
+}
+[2022-07-13T22:01:55.626] [ERROR] default - CastError: Cast to ObjectId failed for value "{ _id: 'non-existent-id' }" (type Object) at path "_id" for model "productos"
+    at model.Query.exec (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4715:21)
+    at model.Query.Query.then (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4814:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  messageFormat: undefined,
+  stringValue: `"{ _id: 'non-existent-id' }"`,
+  kind: 'ObjectId',
+  value: { _id: 'non-existent-id' },
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/error.js:41:28)
+      at new ObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/objectid.js:67:23)
+      at castObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast/objectid.js:19:14)
+      at ObjectId.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schema/objectid.js:247:12)
+      at ObjectId.SchemaType.applySetters (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1590:20)
+      at cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast.js:288:34)
+      at model.Query.Query.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:5137:12),
+  valueType: 'Object'
+}
+[2022-07-13T22:02:18.683] [ERROR] default - CastError: Cast to ObjectId failed for value "a" (type string) at path "_id" for model "productos"
+    at model.Query.exec (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4715:21)
+    at model.Query.Query.then (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4814:15) {
+  messageFormat: undefined,
+  stringValue: '"a"',
+  kind: 'ObjectId',
+  value: 'a',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/error.js:41:28)
+      at new ObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/objectid.js:67:23)
+      at castObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast/objectid.js:24:12)
+      at ObjectId.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schema/objectid.js:247:12)
+      at ObjectId.SchemaType.applySetters (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1590:20)
+      at cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast.js:344:32)
+      at model.Query.Query.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:5137:12),
+  valueType: 'string'
+}
+[2022-07-13T22:03:25.378] [ERROR] default - CastError: Cast to ObjectId failed for value "non-existent-id" (type string) at path "_id" for model "productos"
+    at model.Query.exec (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4715:21)
+    at model.Query.Query.then (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4814:15) {
+  messageFormat: undefined,
+  stringValue: '"non-existent-id"',
+  kind: 'ObjectId',
+  value: 'non-existent-id',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/error.js:41:28)
+      at new ObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/objectid.js:67:23)
+      at castObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast/objectid.js:24:12)
+      at ObjectId.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schema/objectid.js:247:12)
+      at ObjectId.SchemaType.applySetters (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1590:20)
+      at cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast.js:344:32)
+      at model.Query.Query.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:5137:12),
+  valueType: 'string'
+}
+[2022-07-13T22:03:25.414] [ERROR] default - CastError: Cast to ObjectId failed for value "{ _id: 'non-existent-id' }" (type Object) at path "_id" for model "productos"
+    at model.Query.exec (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4715:21)
+    at model.Query.Query.then (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4814:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  messageFormat: undefined,
+  stringValue: `"{ _id: 'non-existent-id' }"`,
+  kind: 'ObjectId',
+  value: { _id: 'non-existent-id' },
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/error.js:41:28)
+      at new ObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/objectid.js:67:23)
+      at castObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast/objectid.js:19:14)
+      at ObjectId.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schema/objectid.js:247:12)
+      at ObjectId.SchemaType.applySetters (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1590:20)
+      at cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast.js:288:34)
+      at model.Query.Query.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:5137:12),
+  valueType: 'Object'
+}
+[2022-07-13T22:04:16.867] [ERROR] default - CastError: Cast to ObjectId failed for value "non-existent-id" (type string) at path "_id" for model "productos"
+    at model.Query.exec (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4715:21)
+    at model.Query.Query.then (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4814:15) {
+  messageFormat: undefined,
+  stringValue: '"non-existent-id"',
+  kind: 'ObjectId',
+  value: 'non-existent-id',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/error.js:41:28)
+      at new ObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/objectid.js:67:23)
+      at castObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast/objectid.js:24:12)
+      at ObjectId.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schema/objectid.js:247:12)
+      at ObjectId.SchemaType.applySetters (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1590:20)
+      at cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast.js:344:32)
+      at model.Query.Query.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:5137:12),
+  valueType: 'string'
+}
+[2022-07-13T22:04:16.899] [ERROR] default - CastError: Cast to ObjectId failed for value "{ _id: 'non-existent-id' }" (type Object) at path "_id" for model "productos"
+    at model.Query.exec (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4715:21)
+    at model.Query.Query.then (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4814:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  messageFormat: undefined,
+  stringValue: `"{ _id: 'non-existent-id' }"`,
+  kind: 'ObjectId',
+  value: { _id: 'non-existent-id' },
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/error.js:41:28)
+      at new ObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/objectid.js:67:23)
+      at castObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast/objectid.js:19:14)
+      at ObjectId.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schema/objectid.js:247:12)
+      at ObjectId.SchemaType.applySetters (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1590:20)
+      at cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast.js:288:34)
+      at model.Query.Query.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:5137:12),
+  valueType: 'Object'
+}
+[2022-07-13T22:05:57.433] [ERROR] default - CastError: Cast to ObjectId failed for value "non-existent-id" (type string) at path "_id" for model "productos"
+    at model.Query.exec (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4715:21)
+    at model.Query.Query.then (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4814:15) {
+  messageFormat: undefined,
+  stringValue: '"non-existent-id"',
+  kind: 'ObjectId',
+  value: 'non-existent-id',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/error.js:41:28)
+      at new ObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/objectid.js:67:23)
+      at castObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast/objectid.js:24:12)
+      at ObjectId.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schema/objectid.js:247:12)
+      at ObjectId.SchemaType.applySetters (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1590:20)
+      at cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast.js:344:32)
+      at model.Query.Query.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:5137:12),
+  valueType: 'string'
+}
+[2022-07-13T22:05:57.470] [ERROR] default - CastError: Cast to ObjectId failed for value "{ _id: 'non-existent-id' }" (type Object) at path "_id" for model "productos"
+    at model.Query.exec (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4715:21)
+    at model.Query.Query.then (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4814:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  messageFormat: undefined,
+  stringValue: `"{ _id: 'non-existent-id' }"`,
+  kind: 'ObjectId',
+  value: { _id: 'non-existent-id' },
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/error.js:41:28)
+      at new ObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/objectid.js:67:23)
+      at castObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast/objectid.js:19:14)
+      at ObjectId.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schema/objectid.js:247:12)
+      at ObjectId.SchemaType.applySetters (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1590:20)
+      at cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast.js:288:34)
+      at model.Query.Query.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:5137:12),
+  valueType: 'Object'
+}
+[2022-07-13T22:06:11.982] [ERROR] default - CastError: Cast to ObjectId failed for value "non-existent-id" (type string) at path "_id" for model "productos"
+    at model.Query.exec (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4715:21)
+    at model.Query.Query.then (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4814:15) {
+  messageFormat: undefined,
+  stringValue: '"non-existent-id"',
+  kind: 'ObjectId',
+  value: 'non-existent-id',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/error.js:41:28)
+      at new ObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/objectid.js:67:23)
+      at castObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast/objectid.js:24:12)
+      at ObjectId.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schema/objectid.js:247:12)
+      at ObjectId.SchemaType.applySetters (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1590:20)
+      at cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast.js:344:32)
+      at model.Query.Query.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:5137:12),
+  valueType: 'string'
+}
+[2022-07-13T22:06:12.019] [ERROR] default - CastError: Cast to ObjectId failed for value "{ _id: 'non-existent-id' }" (type Object) at path "_id" for model "productos"
+    at model.Query.exec (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4715:21)
+    at model.Query.Query.then (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4814:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  messageFormat: undefined,
+  stringValue: `"{ _id: 'non-existent-id' }"`,
+  kind: 'ObjectId',
+  value: { _id: 'non-existent-id' },
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/error.js:41:28)
+      at new ObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/objectid.js:67:23)
+      at castObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast/objectid.js:19:14)
+      at ObjectId.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schema/objectid.js:247:12)
+      at ObjectId.SchemaType.applySetters (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1590:20)
+      at cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast.js:288:34)
+      at model.Query.Query.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:5137:12),
+  valueType: 'Object'
+}
+[2022-07-13T22:07:39.421] [ERROR] default - CastError: Cast to ObjectId failed for value "non-existent-id" (type string) at path "_id" for model "productos"
+    at model.Query.exec (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4715:21)
+    at model.Query.Query.then (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4814:15) {
+  messageFormat: undefined,
+  stringValue: '"non-existent-id"',
+  kind: 'ObjectId',
+  value: 'non-existent-id',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/error.js:41:28)
+      at new ObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/objectid.js:67:23)
+      at castObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast/objectid.js:24:12)
+      at ObjectId.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schema/objectid.js:247:12)
+      at ObjectId.SchemaType.applySetters (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1590:20)
+      at cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast.js:344:32)
+      at model.Query.Query.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:5137:12),
+  valueType: 'string'
+}
+[2022-07-13T22:07:39.451] [ERROR] default - CastError: Cast to ObjectId failed for value "{ _id: 'non-existent-id' }" (type Object) at path "_id" for model "productos"
+    at model.Query.exec (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4715:21)
+    at model.Query.Query.then (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4814:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  messageFormat: undefined,
+  stringValue: `"{ _id: 'non-existent-id' }"`,
+  kind: 'ObjectId',
+  value: { _id: 'non-existent-id' },
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/error.js:41:28)
+      at new ObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/objectid.js:67:23)
+      at castObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast/objectid.js:19:14)
+      at ObjectId.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schema/objectid.js:247:12)
+      at ObjectId.SchemaType.applySetters (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1590:20)
+      at cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast.js:288:34)
+      at model.Query.Query.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:5137:12),
+  valueType: 'Object'
+}
+[2022-07-13T22:09:57.625] [ERROR] default - CastError: Cast to ObjectId failed for value "non-existent-id" (type string) at path "_id" for model "productos"
+    at model.Query.exec (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4715:21)
+    at model.Query.Query.then (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4814:15) {
+  messageFormat: undefined,
+  stringValue: '"non-existent-id"',
+  kind: 'ObjectId',
+  value: 'non-existent-id',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/error.js:41:28)
+      at new ObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/objectid.js:67:23)
+      at castObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast/objectid.js:24:12)
+      at ObjectId.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schema/objectid.js:247:12)
+      at ObjectId.SchemaType.applySetters (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1590:20)
+      at cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast.js:344:32)
+      at model.Query.Query.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:5137:12),
+  valueType: 'string'
+}
+[2022-07-13T22:09:57.660] [ERROR] default - CastError: Cast to ObjectId failed for value "{ _id: 'non-existent-id' }" (type Object) at path "_id" for model "productos"
+    at model.Query.exec (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4715:21)
+    at model.Query.Query.then (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4814:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  messageFormat: undefined,
+  stringValue: `"{ _id: 'non-existent-id' }"`,
+  kind: 'ObjectId',
+  value: { _id: 'non-existent-id' },
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/error.js:41:28)
+      at new ObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/objectid.js:67:23)
+      at castObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast/objectid.js:19:14)
+      at ObjectId.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schema/objectid.js:247:12)
+      at ObjectId.SchemaType.applySetters (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1590:20)
+      at cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast.js:288:34)
+      at model.Query.Query.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:5137:12),
+  valueType: 'Object'
+}
+[2022-07-13T22:10:30.204] [ERROR] default - CastError: Cast to ObjectId failed for value "non-existent-id" (type string) at path "_id" for model "productos"
+    at model.Query.exec (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4715:21)
+    at model.Query.Query.then (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4814:15) {
+  messageFormat: undefined,
+  stringValue: '"non-existent-id"',
+  kind: 'ObjectId',
+  value: 'non-existent-id',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/error.js:41:28)
+      at new ObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/objectid.js:67:23)
+      at castObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast/objectid.js:24:12)
+      at ObjectId.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schema/objectid.js:247:12)
+      at ObjectId.SchemaType.applySetters (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1590:20)
+      at cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast.js:344:32)
+      at model.Query.Query.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:5137:12),
+  valueType: 'string'
+}
+[2022-07-13T22:10:30.235] [ERROR] default - CastError: Cast to ObjectId failed for value "{ _id: 'non-existent-id' }" (type Object) at path "_id" for model "productos"
+    at model.Query.exec (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4715:21)
+    at model.Query.Query.then (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4814:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  messageFormat: undefined,
+  stringValue: `"{ _id: 'non-existent-id' }"`,
+  kind: 'ObjectId',
+  value: { _id: 'non-existent-id' },
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/error.js:41:28)
+      at new ObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/objectid.js:67:23)
+      at castObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast/objectid.js:19:14)
+      at ObjectId.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schema/objectid.js:247:12)
+      at ObjectId.SchemaType.applySetters (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1590:20)
+      at cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast.js:288:34)
+      at model.Query.Query.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:5137:12),
+  valueType: 'Object'
+}
+[2022-07-13T22:11:03.700] [ERROR] default - CastError: Cast to ObjectId failed for value "non-existent-id" (type string) at path "_id" for model "productos"
+    at model.Query.exec (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4715:21)
+    at model.Query.Query.then (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4814:15) {
+  messageFormat: undefined,
+  stringValue: '"non-existent-id"',
+  kind: 'ObjectId',
+  value: 'non-existent-id',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/error.js:41:28)
+      at new ObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/objectid.js:67:23)
+      at castObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast/objectid.js:24:12)
+      at ObjectId.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schema/objectid.js:247:12)
+      at ObjectId.SchemaType.applySetters (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1590:20)
+      at cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast.js:344:32)
+      at model.Query.Query.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:5137:12),
+  valueType: 'string'
+}
+[2022-07-13T22:11:03.741] [ERROR] default - CastError: Cast to ObjectId failed for value "{ _id: 'non-existent-id' }" (type Object) at path "_id" for model "productos"
+    at model.Query.exec (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4715:21)
+    at model.Query.Query.then (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4814:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  messageFormat: undefined,
+  stringValue: `"{ _id: 'non-existent-id' }"`,
+  kind: 'ObjectId',
+  value: { _id: 'non-existent-id' },
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/error.js:41:28)
+      at new ObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/objectid.js:67:23)
+      at castObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast/objectid.js:19:14)
+      at ObjectId.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schema/objectid.js:247:12)
+      at ObjectId.SchemaType.applySetters (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1590:20)
+      at cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast.js:288:34)
+      at model.Query.Query.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:5137:12),
+  valueType: 'Object'
+}
+[2022-07-13T22:11:15.822] [ERROR] default - CastError: Cast to ObjectId failed for value "non-existent-id" (type string) at path "_id" for model "productos"
+    at model.Query.exec (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4715:21)
+    at model.Query.Query.then (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4814:15) {
+  messageFormat: undefined,
+  stringValue: '"non-existent-id"',
+  kind: 'ObjectId',
+  value: 'non-existent-id',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/error.js:41:28)
+      at new ObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/objectid.js:67:23)
+      at castObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast/objectid.js:24:12)
+      at ObjectId.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schema/objectid.js:247:12)
+      at ObjectId.SchemaType.applySetters (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1590:20)
+      at cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast.js:344:32)
+      at model.Query.Query.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:5137:12),
+  valueType: 'string'
+}
+[2022-07-13T22:11:15.857] [ERROR] default - CastError: Cast to ObjectId failed for value "{ _id: 'non-existent-id' }" (type Object) at path "_id" for model "productos"
+    at model.Query.exec (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4715:21)
+    at model.Query.Query.then (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4814:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  messageFormat: undefined,
+  stringValue: `"{ _id: 'non-existent-id' }"`,
+  kind: 'ObjectId',
+  value: { _id: 'non-existent-id' },
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/error.js:41:28)
+      at new ObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/objectid.js:67:23)
+      at castObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast/objectid.js:19:14)
+      at ObjectId.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schema/objectid.js:247:12)
+      at ObjectId.SchemaType.applySetters (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1590:20)
+      at cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast.js:288:34)
+      at model.Query.Query.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:5137:12),
+  valueType: 'Object'
+}
+[2022-07-13T22:15:26.583] [ERROR] default - CastError: Cast to ObjectId failed for value "non-existent-id" (type string) at path "_id" for model "productos"
+    at model.Query.exec (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4715:21)
+    at model.Query.Query.then (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4814:15) {
+  messageFormat: undefined,
+  stringValue: '"non-existent-id"',
+  kind: 'ObjectId',
+  value: 'non-existent-id',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/error.js:41:28)
+      at new ObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/objectid.js:67:23)
+      at castObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast/objectid.js:24:12)
+      at ObjectId.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schema/objectid.js:247:12)
+      at ObjectId.SchemaType.applySetters (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1590:20)
+      at cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast.js:344:32)
+      at model.Query.Query.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:5137:12),
+  valueType: 'string'
+}
+[2022-07-13T22:15:26.617] [ERROR] default - CastError: Cast to ObjectId failed for value "{ _id: 'non-existent-id' }" (type Object) at path "_id" for model "productos"
+    at model.Query.exec (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4715:21)
+    at model.Query.Query.then (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4814:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  messageFormat: undefined,
+  stringValue: `"{ _id: 'non-existent-id' }"`,
+  kind: 'ObjectId',
+  value: { _id: 'non-existent-id' },
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/error.js:41:28)
+      at new ObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/objectid.js:67:23)
+      at castObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast/objectid.js:19:14)
+      at ObjectId.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schema/objectid.js:247:12)
+      at ObjectId.SchemaType.applySetters (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1590:20)
+      at cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast.js:288:34)
+      at model.Query.Query.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:5137:12),
+  valueType: 'Object'
+}
+[2022-07-13T22:16:05.489] [ERROR] default - CastError: Cast to ObjectId failed for value "non-existent-id" (type string) at path "_id" for model "productos"
+    at model.Query.exec (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4715:21)
+    at model.Query.Query.then (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4814:15) {
+  messageFormat: undefined,
+  stringValue: '"non-existent-id"',
+  kind: 'ObjectId',
+  value: 'non-existent-id',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/error.js:41:28)
+      at new ObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/objectid.js:67:23)
+      at castObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast/objectid.js:24:12)
+      at ObjectId.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schema/objectid.js:247:12)
+      at ObjectId.SchemaType.applySetters (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1590:20)
+      at cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast.js:344:32)
+      at model.Query.Query.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:5137:12),
+  valueType: 'string'
+}
+[2022-07-13T22:16:05.524] [ERROR] default - CastError: Cast to ObjectId failed for value "{ _id: 'non-existent-id' }" (type Object) at path "_id" for model "productos"
+    at model.Query.exec (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4715:21)
+    at model.Query.Query.then (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:4814:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  messageFormat: undefined,
+  stringValue: `"{ _id: 'non-existent-id' }"`,
+  kind: 'ObjectId',
+  value: { _id: 'non-existent-id' },
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/error.js:41:28)
+      at new ObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/bson/lib/objectid.js:67:23)
+      at castObjectId (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast/objectid.js:19:14)
+      at ObjectId.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schema/objectid.js:247:12)
+      at ObjectId.SchemaType.applySetters (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1189:12)
+      at ObjectId.SchemaType._castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1623:15)
+      at ObjectId.SchemaType.castForQuery (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1613:15)
+      at ObjectId.SchemaType.castForQueryWrapper (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/schematype.js:1590:20)
+      at cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/cast.js:288:34)
+      at model.Query.Query.cast (/home/esteban/Desktop/Backend/Entrega-21/node_modules/mongoose/lib/query.js:5137:12),
+  valueType: 'Object'
+}
