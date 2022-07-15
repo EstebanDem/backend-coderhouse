@@ -22,7 +22,7 @@ Este comando mostrará por terminal los resultados.
 
 Mostrará los resultados por terminal y además guardará en la carpeta **_testresults_** un archivo con los resultados, el archivo está identificado con la fecha en que se corrió.
 
-Por ejemplo, el día 7 de Julio del 2022 corrí los tests, se generó **`TestResults_2022-07-13.txt`** en la carpeta `testresults`
+Por ejemplo, el día 13 de Julio del 2022 corrí los tests, se generó **`TestResults_2022-07-13.txt`** en la carpeta `testresults`
 
 ```console
 cat TestResults_2022-07-13.txt
