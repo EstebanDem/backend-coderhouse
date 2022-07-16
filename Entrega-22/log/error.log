@@ -1,0 +1,17 @@
+[2022-06-25T21:38:45.706] [ERROR] default - Error: listen EADDRINUSE: address already in use :::3031
+    at Server.setupListenHandle [as _listen2] (node:net:1334:16)
+    at listenInCluster (node:net:1382:12)
+    at Server.listen (node:net:1469:7)
+    at Function.listen (/home/esteban/Desktop/Backend/Entrega-19/node_modules/express/lib/application.js:618:24)
+    at file:///home/esteban/Desktop/Backend/Entrega-19/src/server.js:81:20
+    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)
+    at async Promise.all (index 0)
+    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)
+    at async loadESM (node:internal/process/esm_loader:88:5)
+    at async handleMainPromise (node:internal/modules/run_main:65:12) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 3031
+}
