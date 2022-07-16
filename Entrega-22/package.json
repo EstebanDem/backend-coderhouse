@@ -23,7 +23,7 @@
     "express-graphql": "0.12.0",
     "express-handlebars": "6.0.5",
     "express-session": "1.17.2",
-    "graphql": "15.8.0",
+    "graphql": "15.3.0",
     "log4js": "6.5.2",
     "minimist": "1.2.6",
     "mongoose": "6.3.0",

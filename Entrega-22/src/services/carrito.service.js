@@ -1,6 +1,5 @@
 import { CarritosModel } from '../models/carritos.model.js';
 import {BaseDao} from "./BaseDao.js";
-import {ProductoService} from "./producto.service.js";
 
 export class CarritoService extends BaseDao {
 
@@ -46,10 +45,11 @@ export class CarritoService extends BaseDao {
         }
     }
 
-    async saveProductToCart(id, obj) {
+    async saveProductToCart(id, idProd) {
         try {
             const cart = await CarritosModel.findById(id)
-            cart.products.push(obj.productId);
+            console.log(cart.products);
+            cart.products.push(idProd);
             cart.save();
             return true;
         } catch (error) {
@@ -72,7 +72,7 @@ export class CarritoService extends BaseDao {
     
     async getAllProductsFromCart(id) {
         try {
-            return await CarritosModel.findById(id).populate('products').select({products: 1, _id:0});
+            return (await CarritosModel.findById(id).populate('products').select({products: 1, _id:0})).products;
         } catch (error) {
             this.logger.error(error);
             return false;

@@ -35,11 +35,9 @@ export class ProductoService extends BaseDao{
         }
     }
     
-    async getProductById(objectId) {
+    async getProductById(id) {
         try {
-            const product = await ProductosModel.findOne({
-                [this.ID_FIELD] : objectId
-            })
+            const product = await ProductosModel.findById(id);
             return product;
         } catch (error) {
             this.logger.error(error);
