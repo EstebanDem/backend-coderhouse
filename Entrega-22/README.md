@@ -38,3 +38,11 @@ graphql
 Para acceder a GraphiQL ingresa a
 
 ### `http://localhost:3031/graphql`
+
+#### Ejemplo de una mutación (crear un nuevo producto)
+
+<img src="../Entrega-22/newProductGraphQl.png" width="900px" alt="Nuevo producto con graphql"/>
+
+#### Ejemplo de una query
+
+<img src="../Entrega-22/allProductsGraphQl.png" alt="Todos los productos con graphql"/>

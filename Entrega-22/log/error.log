@@ -131,3 +131,37 @@
   keyValue: { code: 'SOME-CODE-22' },
   [Symbol(errorLabels)]: Set(0) {}
 }
+[2022-07-16T20:49:39.506] [ERROR] default - MongoServerError: E11000 duplicate key error collection: ecommerce.productos index: code_1 dup key: { code: "SOME-CODE-22" }
+    at /home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/node_modules/mongodb/lib/operations/insert.js:53:33
+    at /home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/node_modules/mongodb/lib/cmap/connection_pool.js:273:25
+    at handleOperationResult (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/node_modules/mongodb/lib/sdam/server.js:327:20)
+    at Connection.onMessage (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/node_modules/mongodb/lib/cmap/connection.js:215:9)
+    at MessageStream.<anonymous> (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/node_modules/mongodb/lib/cmap/connection.js:63:60)
+    at MessageStream.emit (node:events:390:28)
+    at processIncomingData (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/node_modules/mongodb/lib/cmap/message_stream.js:108:16)
+    at MessageStream._write (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/node_modules/mongodb/lib/cmap/message_stream.js:28:9)
+    at writeOrBuffer (node:internal/streams/writable:389:12)
+    at _write (node:internal/streams/writable:330:10) {
+  index: 0,
+  code: 11000,
+  keyPattern: { code: 1 },
+  keyValue: { code: 'SOME-CODE-22' },
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2022-07-16T20:49:49.413] [ERROR] default - MongoServerError: E11000 duplicate key error collection: ecommerce.productos index: code_1 dup key: { code: "SOME-CODE-22" }
+    at /home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/node_modules/mongodb/lib/operations/insert.js:53:33
+    at /home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/node_modules/mongodb/lib/cmap/connection_pool.js:273:25
+    at handleOperationResult (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/node_modules/mongodb/lib/sdam/server.js:327:20)
+    at Connection.onMessage (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/node_modules/mongodb/lib/cmap/connection.js:215:9)
+    at MessageStream.<anonymous> (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/node_modules/mongodb/lib/cmap/connection.js:63:60)
+    at MessageStream.emit (node:events:390:28)
+    at processIncomingData (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/node_modules/mongodb/lib/cmap/message_stream.js:108:16)
+    at MessageStream._write (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/node_modules/mongodb/lib/cmap/message_stream.js:28:9)
+    at writeOrBuffer (node:internal/streams/writable:389:12)
+    at _write (node:internal/streams/writable:330:10) {
+  index: 0,
+  code: 11000,
+  keyPattern: { code: 1 },
+  keyValue: { code: 'SOME-CODE-22' },
+  [Symbol(errorLabels)]: Set(0) {}
+}
