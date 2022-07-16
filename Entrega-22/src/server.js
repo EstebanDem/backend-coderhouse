@@ -10,7 +10,7 @@ import logger from "./utils/loggers/Log4jsLogger.js";
 import loggerMiddleware from "./middlewares/routesLogger.middleware.js";
 import {graphqlHTTP} from "express-graphql";
 import cors from 'cors';
-import {schema} from "./graphql/schema.js";
+import {schema} from "./graphql/Schema.js";
 import {CarritoService} from "./services/carrito.service.js";
 import {ProductoService} from "./services/producto.service.js";
 
