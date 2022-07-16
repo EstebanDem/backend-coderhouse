@@ -1,4 +1,4 @@
-export const ProductoUpdateInputType = `
+export const ProductoUpdateInput = `
     input ProductoUpdateInput {
         title: String
         price: Int

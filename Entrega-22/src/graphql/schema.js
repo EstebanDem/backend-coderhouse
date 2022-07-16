@@ -9,9 +9,9 @@ import {GetAllProductsFromCartByIdQuery} from "./queries/GetAllProductsFromCartB
 import {SaveProductToCartQuery} from "./queries/SaveProductToCart.query.js";
 import {DeleteProductFromCartQuery} from "./queries/DeleteProductFromCart.query.js";
 import {GetProductByIdQuery} from "./queries/GetProductById.query.js";
-import {ProductoNewInput} from "./inputs/ProductoNewInput.type.js";
+import {ProductoNewInput} from "./inputs/ProductoNew.input.js";
 import {CreateProductoQuery} from "./queries/CreateProducto.query.js";
-import {ProductoUpdateInputType} from "./inputs/ProductoUpdateInput.type.js";
+import {ProductoUpdateInput} from "./inputs/ProductoUpdate.input.js";
 import {UpdateProductByIdQuery} from "./queries/UpdateProductById.query.js";
 import {DeleteProductByIdQuery} from "./queries/deleteProductById.query.js";
 
@@ -19,7 +19,7 @@ export const schema = buildSchema(`
   ${ProductoType}
   ${ProductoNewInput}
   ${CarritoType}
-  ${ProductoUpdateInputType}
+  ${ProductoUpdateInput}
   
   type Query {
     ${GetAllCarritosQuery}
