@@ -13,7 +13,7 @@ import {ProductoNewInput} from "./inputs/ProductoNew.input.js";
 import {CreateProductoMutation} from "./mutations/CreateProducto.mutation.js";
 import {ProductoUpdateInput} from "./inputs/ProductoUpdate.input.js";
 import {UpdateProductByIdMutation} from "./mutations/UpdateProductById.mutation.js";
-import {DeleteProductByIdMutation} from "./mutations/deleteProductById.mutation.js";
+import {DeleteProductByIdMutation} from "./mutations/DeleteProductById.mutation.js";
 
 export const schema = buildSchema(`
   ${ProductoType}
