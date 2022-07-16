@@ -1,3 +1,3 @@
-export const CreateProductoQuery = `
+export const CreateProductoMutation = `
     createProduct(data: ProductoNewInput): Producto
 `
