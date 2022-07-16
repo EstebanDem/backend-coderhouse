@@ -9,9 +9,9 @@ import {GetAllProductsFromCartByIdQuery} from "./queries/GetAllProductsFromCartB
 import {SaveProductToCartQuery} from "./queries/SaveProductToCart.query.js";
 import {DeleteProductFromCartQuery} from "./queries/DeleteProductFromCart.query.js";
 import {GetProductByIdQuery} from "./queries/GetProductById.query.js";
-import {ProductoNewInput} from "./types/ProductoNewInput.type.js";
+import {ProductoNewInput} from "./inputs/ProductoNewInput.type.js";
 import {CreateProductoQuery} from "./queries/CreateProducto.query.js";
-import {ProductoUpdateInputType} from "./types/ProductoUpdateInput.type.js";
+import {ProductoUpdateInputType} from "./inputs/ProductoUpdateInput.type.js";
 import {UpdateProductByIdQuery} from "./queries/UpdateProductById.query.js";
 import {DeleteProductByIdQuery} from "./queries/deleteProductById.query.js";
 
