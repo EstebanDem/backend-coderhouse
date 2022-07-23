@@ -1,0 +1,167 @@
+[2022-06-25T21:38:45.706] [ERROR] default - Error: listen EADDRINUSE: address already in use :::3031
+    at Server.setupListenHandle [as _listen2] (node:net:1334:16)
+    at listenInCluster (node:net:1382:12)
+    at Server.listen (node:net:1469:7)
+    at Function.listen (/home/esteban/Desktop/Backend/Entrega-19/node_modules/express/lib/application.js:618:24)
+    at file:///home/esteban/Desktop/Backend/Entrega-19/src/server.js:81:20
+    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)
+    at async Promise.all (index 0)
+    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)
+    at async loadESM (node:internal/process/esm_loader:88:5)
+    at async handleMainPromise (node:internal/modules/run_main:65:12) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 3031
+}
+[2022-07-16T19:11:03.265] [ERROR] default - MongooseError: Cannot populate path `productos` because it is not in your schema. Set the `strictPopulate` option to false to override.
+    at getModelsMapForPopulate (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:47:12)
+    at populate (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/model.js:4494:21)
+    at _populate (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/model.js:4454:5)
+    at /home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/model.js:4432:5
+    at promiseOrCallback (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
+    at Mongoose._promiseOrCallback (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/index.js:1181:10)
+    at Function.Model.populate (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/model.js:4430:23)
+    at /home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/query.js:2449:11
+    at /home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/query.js:3241:21
+    at processTicksAndRejections (node:internal/process/task_queues:78:11)
+[2022-07-16T19:11:04.074] [ERROR] default - MongooseError: Cannot populate path `productos` because it is not in your schema. Set the `strictPopulate` option to false to override.
+    at getModelsMapForPopulate (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:47:12)
+    at populate (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/model.js:4494:21)
+    at _populate (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/model.js:4454:5)
+    at /home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/model.js:4432:5
+    at promiseOrCallback (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
+    at Mongoose._promiseOrCallback (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/index.js:1181:10)
+    at Function.Model.populate (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/model.js:4430:23)
+    at /home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/query.js:2449:11
+    at /home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/query.js:3241:21
+    at processTicksAndRejections (node:internal/process/task_queues:78:11)
+[2022-07-16T19:11:04.226] [ERROR] default - MongooseError: Cannot populate path `productos` because it is not in your schema. Set the `strictPopulate` option to false to override.
+    at getModelsMapForPopulate (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:47:12)
+    at populate (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/model.js:4494:21)
+    at _populate (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/model.js:4454:5)
+    at /home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/model.js:4432:5
+    at promiseOrCallback (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
+    at Mongoose._promiseOrCallback (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/index.js:1181:10)
+    at Function.Model.populate (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/model.js:4430:23)
+    at /home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/query.js:2449:11
+    at /home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/query.js:3241:21
+    at processTicksAndRejections (node:internal/process/task_queues:78:11)
+[2022-07-16T19:11:05.050] [ERROR] default - MongooseError: Cannot populate path `productos` because it is not in your schema. Set the `strictPopulate` option to false to override.
+    at getModelsMapForPopulate (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:47:12)
+    at populate (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/model.js:4494:21)
+    at _populate (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/model.js:4454:5)
+    at /home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/model.js:4432:5
+    at promiseOrCallback (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
+    at Mongoose._promiseOrCallback (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/index.js:1181:10)
+    at Function.Model.populate (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/model.js:4430:23)
+    at /home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/query.js:2449:11
+    at /home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/query.js:3241:21
+    at processTicksAndRejections (node:internal/process/task_queues:78:11)
+[2022-07-16T19:11:06.033] [ERROR] default - MongooseError: Cannot populate path `productos` because it is not in your schema. Set the `strictPopulate` option to false to override.
+    at getModelsMapForPopulate (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:47:12)
+    at populate (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/model.js:4494:21)
+    at _populate (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/model.js:4454:5)
+    at /home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/model.js:4432:5
+    at promiseOrCallback (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
+    at Mongoose._promiseOrCallback (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/index.js:1181:10)
+    at Function.Model.populate (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/model.js:4430:23)
+    at /home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/query.js:2449:11
+    at /home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/query.js:3241:21
+    at processTicksAndRejections (node:internal/process/task_queues:78:11)
+[2022-07-16T19:11:06.597] [ERROR] default - MongooseError: Cannot populate path `productos` because it is not in your schema. Set the `strictPopulate` option to false to override.
+    at getModelsMapForPopulate (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:47:12)
+    at populate (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/model.js:4494:21)
+    at _populate (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/model.js:4454:5)
+    at /home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/model.js:4432:5
+    at promiseOrCallback (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
+    at Mongoose._promiseOrCallback (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/index.js:1181:10)
+    at Function.Model.populate (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/model.js:4430:23)
+    at /home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/query.js:2449:11
+    at /home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/query.js:3241:21
+    at processTicksAndRejections (node:internal/process/task_queues:78:11)
+[2022-07-16T19:11:06.762] [ERROR] default - MongooseError: Cannot populate path `productos` because it is not in your schema. Set the `strictPopulate` option to false to override.
+    at getModelsMapForPopulate (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:47:12)
+    at populate (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/model.js:4494:21)
+    at _populate (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/model.js:4454:5)
+    at /home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/model.js:4432:5
+    at promiseOrCallback (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
+    at Mongoose._promiseOrCallback (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/index.js:1181:10)
+    at Function.Model.populate (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/model.js:4430:23)
+    at /home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/query.js:2449:11
+    at /home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/query.js:3241:21
+    at processTicksAndRejections (node:internal/process/task_queues:78:11)
+[2022-07-16T19:11:06.930] [ERROR] default - MongooseError: Cannot populate path `productos` because it is not in your schema. Set the `strictPopulate` option to false to override.
+    at getModelsMapForPopulate (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:47:12)
+    at populate (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/model.js:4494:21)
+    at _populate (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/model.js:4454:5)
+    at /home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/model.js:4432:5
+    at promiseOrCallback (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
+    at Mongoose._promiseOrCallback (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/index.js:1181:10)
+    at Function.Model.populate (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/model.js:4430:23)
+    at /home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/query.js:2449:11
+    at /home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/query.js:3241:21
+    at processTicksAndRejections (node:internal/process/task_queues:78:11)
+[2022-07-16T19:11:07.113] [ERROR] default - MongooseError: Cannot populate path `productos` because it is not in your schema. Set the `strictPopulate` option to false to override.
+    at getModelsMapForPopulate (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:47:12)
+    at populate (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/model.js:4494:21)
+    at _populate (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/model.js:4454:5)
+    at /home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/model.js:4432:5
+    at promiseOrCallback (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
+    at Mongoose._promiseOrCallback (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/index.js:1181:10)
+    at Function.Model.populate (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/model.js:4430:23)
+    at /home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/query.js:2449:11
+    at /home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/lib/query.js:3241:21
+    at processTicksAndRejections (node:internal/process/task_queues:78:11)
+[2022-07-16T20:06:19.025] [ERROR] default - MongoServerError: E11000 duplicate key error collection: ecommerce.productos index: code_1 dup key: { code: "SOME-CODE-22" }
+    at /home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/node_modules/mongodb/lib/operations/insert.js:53:33
+    at /home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/node_modules/mongodb/lib/cmap/connection_pool.js:273:25
+    at handleOperationResult (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/node_modules/mongodb/lib/sdam/server.js:327:20)
+    at Connection.onMessage (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/node_modules/mongodb/lib/cmap/connection.js:215:9)
+    at MessageStream.<anonymous> (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/node_modules/mongodb/lib/cmap/connection.js:63:60)
+    at MessageStream.emit (node:events:390:28)
+    at processIncomingData (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/node_modules/mongodb/lib/cmap/message_stream.js:108:16)
+    at MessageStream._write (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/node_modules/mongodb/lib/cmap/message_stream.js:28:9)
+    at writeOrBuffer (node:internal/streams/writable:389:12)
+    at _write (node:internal/streams/writable:330:10) {
+  index: 0,
+  code: 11000,
+  keyPattern: { code: 1 },
+  keyValue: { code: 'SOME-CODE-22' },
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2022-07-16T20:49:39.506] [ERROR] default - MongoServerError: E11000 duplicate key error collection: ecommerce.productos index: code_1 dup key: { code: "SOME-CODE-22" }
+    at /home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/node_modules/mongodb/lib/operations/insert.js:53:33
+    at /home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/node_modules/mongodb/lib/cmap/connection_pool.js:273:25
+    at handleOperationResult (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/node_modules/mongodb/lib/sdam/server.js:327:20)
+    at Connection.onMessage (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/node_modules/mongodb/lib/cmap/connection.js:215:9)
+    at MessageStream.<anonymous> (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/node_modules/mongodb/lib/cmap/connection.js:63:60)
+    at MessageStream.emit (node:events:390:28)
+    at processIncomingData (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/node_modules/mongodb/lib/cmap/message_stream.js:108:16)
+    at MessageStream._write (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/node_modules/mongodb/lib/cmap/message_stream.js:28:9)
+    at writeOrBuffer (node:internal/streams/writable:389:12)
+    at _write (node:internal/streams/writable:330:10) {
+  index: 0,
+  code: 11000,
+  keyPattern: { code: 1 },
+  keyValue: { code: 'SOME-CODE-22' },
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2022-07-16T20:49:49.413] [ERROR] default - MongoServerError: E11000 duplicate key error collection: ecommerce.productos index: code_1 dup key: { code: "SOME-CODE-22" }
+    at /home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/node_modules/mongodb/lib/operations/insert.js:53:33
+    at /home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/node_modules/mongodb/lib/cmap/connection_pool.js:273:25
+    at handleOperationResult (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/node_modules/mongodb/lib/sdam/server.js:327:20)
+    at Connection.onMessage (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/node_modules/mongodb/lib/cmap/connection.js:215:9)
+    at MessageStream.<anonymous> (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/node_modules/mongodb/lib/cmap/connection.js:63:60)
+    at MessageStream.emit (node:events:390:28)
+    at processIncomingData (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/node_modules/mongodb/lib/cmap/message_stream.js:108:16)
+    at MessageStream._write (/home/esteban/Desktop/Backend/Entrega-22/node_modules/mongoose/node_modules/mongodb/lib/cmap/message_stream.js:28:9)
+    at writeOrBuffer (node:internal/streams/writable:389:12)
+    at _write (node:internal/streams/writable:330:10) {
+  index: 0,
+  code: 11000,
+  keyPattern: { code: 1 },
+  keyValue: { code: 'SOME-CODE-22' },
+  [Symbol(errorLabels)]: Set(0) {}
+}
