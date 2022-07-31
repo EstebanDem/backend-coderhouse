@@ -45,3 +45,5 @@
 #### [🔗 Entrega 22 - Reformar para usar GraphQL](https://github.com/EstebanDem/backend-coderhouse/tree/master/Entrega-22#readme)
 
 #### [🔗 Entrega 23 - Reformar para usar otro Framework (Koa)](https://github.com/EstebanDem/backend-coderhouse/tree/master/Entrega-23#readme)
+
+#### [🔗 Entrega 24 - Server en Deno](https://github.com/EstebanDem/backend-coderhouse/tree/master/Entrega-24#readme)
