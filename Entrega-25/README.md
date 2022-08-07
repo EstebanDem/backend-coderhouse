@@ -1,38 +1,42 @@
-# Desafío 21
+# Entrega Final
 
-## Testeamos nuestra API
+## Login, Logout y SignUp de usuario
 
-Agregué testing de algunos controllers utilizando **Jest**, generé las Requests con **axios**.
+### Home
 
-```console
-test
-└── controllers
-    ├── other.test.js
-    └── product.test.js
-```
+En `/api/usuario`
 
-Para correr los tests se puede ejecutar los siguientes comandos _(debe estár levantado el servidor)_
+- ✅ Si el usuario se encuentra loggeado:
 
-### `npm run test`
+<img src="../Entrega-25/imagesReadme/homeLogged.png" alt="Home with logged user"/>
 
-Este comando mostrará por terminal los resultados.
+- ❌ Si el usuario **no** se encuentra loggeado:
+
+<img src="../Entrega-25/imagesReadme/homeNotLogged.png" alt="Home with unlogged user"/>
+
+### Sign Up
+
+En `/api/usuario/signup`
+
+<img src="../Entrega-25/imagesReadme/signUpView.png" alt="Sign up view"/>
+
+### Log in
+
+En `/api/usuario/login`
+
+<img src="../Entrega-25/imagesReadme/loginView.png" alt="Login view"/>
+
+### Log out
+
+En `/api/usuario/logout`
+
+<img src="../Entrega-25/imagesReadme/logoutView.png" alt="Logout view"/>
 
 
-### `npm run testReport`
 
-Mostrará los resultados por terminal y además guardará en la carpeta **_testresults_** un archivo con los resultados, el archivo está identificado con la fecha en que se corrió.
 
-Por ejemplo, el día 13 de Julio del 2022 corrí los tests, se generó **`TestResults_2022-07-13.txt`** en la carpeta `testresults`
 
-```console
-cat testresults/TestResults_2022-07-13.txt
-                                                       
-PASS test/controllers/other.test.js
-PASS test/controllers/product.test.js
 
-Test Suites: 2 passed, 2 total
-Tests:       3 passed, 3 total
-Snapshots:   0 total
-Time:        0.794 s, estimated 1 s
-Ran all test suites.
-```
+
+
+
