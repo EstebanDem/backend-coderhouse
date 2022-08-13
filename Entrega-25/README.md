@@ -1,5 +1,7 @@
 # Entrega Final
 
+Esta entrega incluye lo realizado en las anteriores, para ver los detalles se pueden ver en cada README.
+
 ## Login, Logout y SignUp de usuario
 
 ### Home
@@ -33,20 +35,3 @@ En `/api/usuario/login`
 En `/api/usuario/logout`
 
 <img src="../Entrega-25/imagesReadme/logoutView.png" alt="Logout view"/>
-
-## Login con Facebook
-
-Implementado en entrega anterior, para ello ver: [Entrega 13 - Inicio de sesión con Facebook](https://github.com/EstebanDem/backend-coderhouse/tree/master/Entrega-13#readme)
-
-## Testing
-
-Mismos tests que antes, para ver más detalles ver: [Entrega 21 - Testeamos nuestra API](https://github.com/EstebanDem/backend-coderhouse/tree/master/Entrega-21#readme)
-
-
-
-
-
-
-
-
-
