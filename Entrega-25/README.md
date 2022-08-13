@@ -20,6 +20,8 @@ En `/api/usuario/signup`
 
 <img src="../Entrega-25/imagesReadme/signUpView.png" alt="Sign up view"/>
 
+💡 Si se tiene configurada la cuenta de gmail y quitando el comentario de `user.controller.js:28` se recibirá un correo electrónico de que se ha creado un nuevo usuario.
+
 ### Log in
 
 En `/api/usuario/login`
