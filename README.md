@@ -47,3 +47,5 @@
 #### [🔗 Entrega 23 - Reformar para usar otro Framework (Koa)](https://github.com/EstebanDem/backend-coderhouse/tree/master/Entrega-23#readme)
 
 #### [🔗 Entrega 24 - Server en Deno](https://github.com/EstebanDem/backend-coderhouse/tree/master/Entrega-24#readme)
+
+#### [🔗 Entrega 25 - Entrega Final](https://github.com/EstebanDem/backend-coderhouse/tree/master/Entrega-25#readme)
