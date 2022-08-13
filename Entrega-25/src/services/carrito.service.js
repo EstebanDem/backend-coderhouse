@@ -24,7 +24,7 @@ export class CarritoService extends BaseDao {
             return await CarritosModel.create({});
         } catch (error) {
             this.logger.error(error);
-            return false;
+            return null;
         }
     }
 
@@ -33,7 +33,7 @@ export class CarritoService extends BaseDao {
             return await CarritosModel.find();
         } catch (error) {
             this.logger.error(error);
-            return false;
+            return null;
         }
     }
     
@@ -42,7 +42,7 @@ export class CarritoService extends BaseDao {
             return await CarritosModel.findByIdAndDelete({[this.ID_FIELD]: id})
         } catch (error) {
             this.logger.error(error);
-            return false;
+            return null;
         }
     }
 
@@ -75,7 +75,7 @@ export class CarritoService extends BaseDao {
             return await CarritosModel.findById(id).populate('products').select({products: 1, _id:0});
         } catch (error) {
             this.logger.error(error);
-            return false;
+            return null;
         }
     }
 }
