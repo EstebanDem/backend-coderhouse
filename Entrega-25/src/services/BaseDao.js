@@ -1,6 +1,7 @@
 import logger from "../utils/loggers/Log4jsLogger.js";
 import "../configs/db.config.js";
 
+/** @Abstract */
 export class BaseDao {
 
     constructor() {
