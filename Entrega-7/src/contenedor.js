@@ -122,16 +122,11 @@ class Contenedor {
       const objectIdToBeUpdated = parsedData.find(
         (producto) => producto.id === id
       );
-      if (objectIdToBeUpdated) {
+      if (objectIdToBeUpdated) {      
         const index = parsedData.indexOf(objectIdToBeUpdated);
-        
-        const valorActual = parsedData[index][objectKey];
-        
-        const newArray = [...valorActual, objectToAdd[objectKey]];
-        
-        
-        
-        parsedData[index][objectKey] = newArray;
+        const valorActual = parsedData[index];
+        const currentProducts = valorActual['products']
+        currentProducts.push(objectToAdd.products)
         
         await fs.promises.writeFile(this._filename, JSON.stringify(parsedData));
         return true;
