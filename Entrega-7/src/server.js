@@ -84,7 +84,7 @@ routerCart.post('/', async(req, res) => {
     const {body} = req;
     
     body.timestamp = Date.now();
-    
+    body.products = [];
     const newCartId = await carrito.save(body);
     
     newCartId
@@ -108,7 +108,7 @@ routerCart.post('/:id/productos', async(req,res) => {
     const {id} = req.params;
     const { body } = req;
     
-    const product = await contenedor.getById(body['id']);    
+    const product = await contenedor.getById(body['id']);
     
     if (product) {
         const cartExist = await carrito.addToArrayById(id, {"products": product});
